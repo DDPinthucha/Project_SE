@@ -1,0 +1,36 @@
+nav{
+    background-color: pink;
+    
+    font-size: xx-large;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div{
+    padding: 10px;
+}
+
+div input{
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-top: 10 px;
+    padding-bottom: 10 px;
+}
+
+.outer {
+    background-color: 	Gainsboro;
+}
+
+.inner{
+    background-color: white;
+}
+
+#submitbtt input{
+    background-color: brown;
+    color: white;
+}
+
