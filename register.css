@@ -1,36 +1,67 @@
-nav{
-    background-color: pink;
-    
-    font-size: xx-large;
+@font-face {
+    font-family: "Itim";
+    src: url("Itim-Regular.ttf") format("truetype");
+  }
+  
+  body {
+    font-family: "Itim", sans-serif;
+  }
+.navbar {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+  background-blend-mode: darken;
+  background-size: cover;
+  color: black;
+  padding: 10px 20px;
 }
 
-nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+.nav-list {
+  display: flex;
+  list-style: none;
 }
 
-div{
-    padding: 10px;
+.nav-list li {
+  margin-right: 20px;
 }
 
-div input{
-    border-radius: 10px;
-    padding-right: 30px;
-    padding-top: 10 px;
-    padding-bottom: 10 px;
+.nav-list li:last-child {
+  margin-right: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: white;
+}
+
+div {
+  padding: 10px;
+}
+
+div input {
+  border-radius: 10px;
+  padding-right: 30px;
+  padding-top: 10 px;
+  padding-bottom: 10 px;
 }
 
 .outer {
-    background-color: 	Gainsboro;
+  background-color: Gainsboro;
 }
 
-.inner{
-    background-color: white;
+.inner {
+  background-color: white;
 }
 
-#submitbtt input{
-    background-color: brown;
-    color: white;
+#submitbtt input {
+  background-color: brown;
+  color: white;
 }
-
