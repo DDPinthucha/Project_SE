@@ -1,3 +1,14 @@
+.navbar { 
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    background-blend-mode: darken;
+    background-size: cover;
+    color: black;
+    padding: 10px 20px;
+  }  
 .Tabbar {
     display: flex;
     align-items: center;
