@@ -34,41 +34,6 @@
   color: white;
 }
 
-.Tabbar {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin: 10px;
-  overflow: hidden;
-  font-family: "Itim", sans-serif;
-  font-size: 20px;
-}
-
-.Tabbar label {
-  margin-right: auto;
-}
-
-.Tabbar .Tabbar-link {
-  margin-left: auto;
-}
-.Tabbar a {
-  color: #000;
-  text-decoration: none;
-}
-
-.Tabbar ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: inline;
-}
-
-.Tabbar li {
-  padding: 10px;
-  margin: 0;
-  display: inline;
-}
-
 body {
   background: green;
 }
@@ -118,7 +83,8 @@ body {
   outline: none;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
-  padding: 10px 15px 10px 10px;
+  font-size: 18px;
+  padding: 10px 15px 10px 20px;
   margin: 35px;
 }
 
@@ -133,3 +99,38 @@ body {
   transform: translateY(180%);
   font-size: 20px;
 }
+
+.forgot {
+  display: flex;
+  padding: 20px 15px 10px 220px;
+  font-size: 18px;
+  margin-bottom: -50px;
+  color: #737373;
+}
+
+.forgot a{
+  color: #737373;
+  font-size: 18px;
+}
+
+.forgot a:hover{
+  color: white;
+  font-size: 18px;
+}
+
+.registerpage {
+  display: flex;
+  padding: 10px 15px 10px 200px;
+  color: #737373;
+}
+
+.registerpage a {
+  color: #737373;
+}
+
+.registerpage a:hover {
+  color: white;
+}
+
+
+
