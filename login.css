@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Itim";
+  src: url("Itim-Regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Itim", sans-serif;
+}
+
 .navbar {
   display: flex;
   position: sticky;
