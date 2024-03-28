@@ -121,12 +121,12 @@ body {
   color: #737373;
 }
 
-.forgot a{
+.forgot a {
   color: #737373;
   font-size: 18px;
 }
 
-.forgot a:hover{
+.forgot a:hover {
   color: white;
   font-size: 18px;
 }
@@ -144,6 +144,3 @@ body {
 .registerpage a:hover {
   color: white;
 }
-
-
-
