@@ -62,7 +62,7 @@ body {
   }
 
 .page-title {
-    height: 50px;
+    height: 40px;
     text-align: center;
     color: #333;
     margin-top: 20px; /* เพิ่มขอบบนให้กับหัวเรื่อง */
@@ -90,9 +90,9 @@ body {
 
 .product {
     position: relative;
-    width: 15vw; /* กำหนดความกว้างเป็น 20% ของความกว้างของหน้าจอ */
-    height: 15vw; /* กำหนดความสูงเป็น 20% ของความกว้างของหน้าจอ */
-    margin: 2vw; /* ระยะห่างระหว่างวงกลมเป็น 2% ของความกว้างของหน้าจอ */
+    width: 14vw; /* กำหนดความกว้างเป็น 20% ของความกว้างของหน้าจอ */
+    height: 14vw; /* กำหนดความสูงเป็น 20% ของความกว้างของหน้าจอ */
+    margin: 2vw ; /* ระยะห่างระหว่างวงกลมเป็น 2% ของความกว้างของหน้าจอ */
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
@@ -137,6 +137,7 @@ body {
     font-size: 6px; /* กำหนดขนาดตัวอักษรของหัวข้อสินค้าให้ขยายตามความกว้างของหน้าจอ */
     margin-bottom: 10px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .product-description {
