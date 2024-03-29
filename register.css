@@ -3,11 +3,14 @@
   font-weight: 400;
   font-style: normal;
 }
-
   
-  body {
+body {
     font-family: "Itim", sans-serif;
-  }
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .navbar {
   display: flex;
   position: sticky;
@@ -56,14 +59,76 @@ div input {
 }
 
 .outer {
-  background-color: Gainsboro;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
 }
 
 .inner {
   background-color: white;
+  display: flex;
+  max-width: 1000px; 
+  width: 80%; 
+  height: 75%;
+  padding: 20px; 
+  padding-left: 15px;
+  box-sizing: border-box; 
 }
 
 #submitbtt input {
-  background-color: brown;
-  color: white;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: #666;
+    border: none;
+    padding: 14px 15px;
+    margin: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
+
+input{
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin-inline-start: auto;
+    background-color: #f0f0f0;
+    transition: box-shadow 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงเป็นเรื่องอ่อนโยน */
+    border-radius: 10px; /* เพิ่มขอบมนเมื่อไม่โฟกัส */
+    box-shadow: none; /* ไม่มีเส้นขอบเมื่อไม่โฟกัส */
+}
+
+input:focus{
+    outline: none; /* ลบเส้นขอบเมื่อมีการโฟกัส */
+    box-shadow: 0 0 5px #ec75dc; /* เพิ่มเส้นขอบเมื่อมีการโฟกัส */
+    transform: translateY(-7px);
+  }
+
+.form-img{
+    flex-basis: 50%;
+    width: 50%;
+    height: auto;
+    background-size: cover;
+    padding-top: 40px;
+    padding-left: 45px;
+    align-items: center;
+    display: grid;
+    float: left;
+   
+  }
+
+  .form-img img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+
+.register-form{
+    outline: none;
+    float: right;
+    flex-basis: 50%; 
+    padding: 30px; 
+}
+
