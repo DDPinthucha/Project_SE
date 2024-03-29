@@ -80,7 +80,7 @@ span {
 
   
 header {
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px 20px;
     color: black;
   }
@@ -101,7 +101,7 @@ header {
 .nav-list li a {
   text-decoration: none;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
   transition: color 0.3s ease-in-out;
 }
 
