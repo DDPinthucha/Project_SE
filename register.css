@@ -5,10 +5,12 @@
 }
   
 body {
+    overflow: hidden;
     font-family: "Itim", sans-serif;
     background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+     
 }
 
 .navbar {
@@ -59,11 +61,10 @@ div input {
 }
 
 .outer {
-
   display: flex;
   justify-content: center;
   align-items: center; 
-  height: 100vh; 
+  overflow: hidden;
 }
 
 .inner {
@@ -93,6 +94,7 @@ input{
     border: none;
     width: 100%;
     padding: 15px;
+    margin-right: 110px;
     margin-inline-start: auto;
     background-color: #f0f0f0;
     transition: box-shadow 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงเป็นเรื่องอ่อนโยน */
@@ -103,6 +105,7 @@ input{
 input:focus{
     outline: none; /* ลบเส้นขอบเมื่อมีการโฟกัส */
     box-shadow: 0 0 5px #ec75dc; /* เพิ่มเส้นขอบเมื่อมีการโฟกัส */
+    font-weight: bold;
     transform: translateY(-7px);
   }
 
@@ -111,7 +114,7 @@ input:focus{
     width: 50%;
     height: auto;
     background-size: cover;
-    padding-top: 40px;
+    padding-top: 55px;
     padding-left: 45px;
     align-items: center;
     display: grid;
@@ -120,15 +123,18 @@ input:focus{
   }
 
   .form-img img {
-    max-width: 100%; 
+    max-width: 70%; 
     height: auto; 
   }
   
 
 .register-form{
+
     outline: none;
-    float: right;
+    /*float: right;*/
+    display:flow-root;
     flex-basis: 50%; 
     padding: 30px; 
+    padding-right: 60px;
 }
 
