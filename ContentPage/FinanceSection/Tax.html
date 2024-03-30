@@ -74,20 +74,21 @@
           <br />
         </div>
         <div class="love_text-container">
-          <img
-            src="/images/heart.png"
-            alt="heart.png"
-            width="50"
-            height="45"
-          /><br />18K
-          <img
-            src="/images/comment.png"
-            alt="heart.png"
-            width="50"
-            height="45"
-          /><br />67
-        </div>
+          <button type="submit">
+            <img src="/images/heart.png" id="like" onclick="liked(event)"/>
+          </button>
+          <h3 id="counter" style="margin-top: 13px;">0</h3>
+        <br />
+        <img
+          src="/images/comment.png"
+          alt="heart.png"
+          width="50"
+          height="45"
+        /><br />67
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
+  <script src="/like.js"></script>
 </html>
