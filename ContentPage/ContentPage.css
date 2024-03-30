@@ -251,11 +251,6 @@ form.search-bar::after {
   background: rgb(169, 46, 222);
 }
 
-.comments {
- 
-}
-
-
 .comments #text{
    border: solid 5px rgb(255, 255, 255);
   padding: 5px;
