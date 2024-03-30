@@ -21,7 +21,7 @@
       <!--รูปbackground-->
       <div class="inner">
         <!--ใส่ข้อความ กล่องขาว-->
-        <form action="">
+        <form id="register-form" action="">
           <!--กลับมาใส่ action ด้วย-->
           <div class="form-img">
             <img src="images/witch_regis.png" alt="">
@@ -35,6 +35,7 @@
             <input
               type="text"
               name="username"
+              id="username"
               placeholder="Type your username"
               required
             />
@@ -44,6 +45,7 @@
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Type your email"
               required
             />
@@ -53,6 +55,7 @@
             <input
               type="password"
               name="password"
+              id="password"
               placeholder="Type your password"
               required
             />
@@ -62,16 +65,22 @@
             <input
               type="password"
               name="password_confirm"
+              id="password_confirm"
               placeholder="Type confirm your password"
               required
             />
           </div>
           <div id="submitbtt">
-            <input type="submit" value="Register Now" />
+            <input type="submit" value="Register Now" id="submit" />
+            <p class="account">Already have an account? <a href="login.html">Sing up</a> </p>
           </div>
         </div>
         </form>
       </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="register.js"></script>
   </body>
 </html>
