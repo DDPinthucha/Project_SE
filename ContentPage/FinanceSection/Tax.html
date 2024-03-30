@@ -22,10 +22,14 @@
         <li><a href="#">หมวดหมู่</a></li>
       </ul>
     </nav>
-    <form class="search-bar" action="#" method="GET">
-      <input type="text" placeholder="ค้นหาความรู้ที่สนใจ!" name="search">
+    
+    <!--search-->
+    <form class="search-bar" action="#" method="GET" onsubmit="return handleSearch()">
+      <input type="text" list="search-suggestions" autocomplete="off" placeholder="ค้นหาความรู้ที่สนใจ!" name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
+      <datalist id="search-suggestions"></datalist>
+    </form>
+    <script src="/search.js"></script>
   
       <br>
     </div>

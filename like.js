@@ -7,7 +7,7 @@ function liked(event) {
   var imageSrc = event.target.getAttribute("src"); // เพิ่ม attribute 'src' เพื่อให้สามารถตรวจสอบรูปภาพที่ถูกคลิกได้
 
   if (imageSrc.includes("/images/heart.png")) {
-    // ตรวจสอบว่ารูปภาพที่ถูกคลิกเป็นรูป messageImage_1711734441116.jpg หรือไม่
+
     counter++;
   } else {
     switch (button) {
