@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap"
         rel="stylesheet">
-    <script type="module" src="login.js" defer></script>
     <title>LoginPage</title>
 </head>
 
@@ -31,14 +30,20 @@
                     <h3>ยินดีต้อนรับสู่ LearnHuff</h3>
                     <h3>เข้าสู่ระบบเพื่อค้นหาสิ่งที่น่าสนใจสำหรับคุณ!</h3>
                     <form id="login-form" action="homepage.html" method="POST">
-                        <input type="text" name="username" placeholder="Email/Username" required autofocus="">
-                        <input type="password" name="password" placeholder="Password" required autofocus="">
+                        <input id="username" type="text" name="username" placeholder="Email/Username" required autofocus="">
+                    <input id="password" type="password" name="password" placeholder="Password" required autofocus="">
                         <p class="account">Forgot your <a href="#">password?</a></p>
                         <p class="account">Don't Have An account? <a href="register.html">Register</a> </p>
-                        <button class="btn" type="submit" id="login-btn">
+                        <button class="btn" type="button" onclick="submitForm()" id="login-btn">
                             Login
                         </a></button>
-                    </form>
+                    </form> 
+                    <script>
+                        document.getElementById('login-form').addEventListener('submit', function(event) {
+                            event.preventDefault(); // หยุดการกระทำของฟอร์มเพื่อให้เรียกใช้งาน submitForm แทน
+                            submitForm(); // เรียกใช้ฟังก์ชัน submitForm เมื่อมีการส่งฟอร์ม
+                        });
+                    </script>
                 </div>
                 <div class="form-img">
                     <img src="images/witch.png" alt="">
@@ -46,16 +51,10 @@
             </div>
         </div>
     </div>
-    <!-- Firebase Authentication -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
-
-<!-- Firebase Core (Always required) -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
-
-    <script src="login.js"></script>
+<script type="module" src="login.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+<script src="login.js"></script>
 </body>
 
 </html>
