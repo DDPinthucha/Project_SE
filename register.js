@@ -14,25 +14,8 @@ firebase.initializeApp(firebaseConfig);
 //refernce your database
 var DatabaseloginDB = firebase.database().ref('Databaselogin');
 
-document.getElementById('register-form').addEventListener('submit',submitForm);
+document.getElementById('register-form').addEventListener('submit', submitForm);
 
-function submitForm(e){
-    e.preventDefault();
-
-    var username = getElementVal("username");
-    var email =  getElementVal("email");
-    var password = getElementVal("password");
-    var password_confirm = getElementVal("password_confirm");
-
-    checkRequired([username,email, password, password_confirm]);
-    checkLength(password, 6, 16);
-    checkLength(password_confirm, 6, 16);
-    checkEmail(email);
-    checkPasswordMatch(password, password_confirm);
-    checkLength(username, 1, 20);
-    saveMessages(username,email,password,password_confirm);
-
-}
 
 const getElementVal = (id) => {
     return document.getElementById(id).value;
@@ -53,30 +36,33 @@ function showError(input, message) {
   }
   
   //show success colour
-function showSuccess(input) {
+  function showSuccess(input) {
     const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-    const smallError = formControl.querySelector('small');
-    if (smallError) {
-      smallError.innerText = '';
+    if (formControl) { // เพิ่มการตรวจสอบว่า formControl ไม่เป็น undefined
+        formControl.className = 'form-control success';
+        const smallError = formControl.querySelector('small');
+        if (smallError) {
+            smallError.innerText = '';
+        }
     }
 }
 
 function checkRequired(inputArr) {
     inputArr.forEach(function(input){
-        if(input.value.trim() === ''){
+        if(input.trim() === ''){
             showError(input,`${getFieldName(input)} is required`)
-        }else {
+        } else {
             showSuccess(input);
         }
     });
-  }
+}
   
   
   //check email is valid
 function checkEmail(input) {
+    console.log("emailorcheck:", input);
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(re.test(input.value.trim())) {
+      if(re.test(input.trim())) {
           showSuccess(input)
       }else {
           showError(input,'Email is not invalid');
@@ -84,9 +70,10 @@ function checkEmail(input) {
 }
 
 function checkLength(input, min ,max) {
-    if(input.value.length < min) {
+    console.log("input:", input);
+    if(input.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
+    }else if(input.length > max) {
         showError(input, `${getFieldName(input)} must be les than ${max} characters`);
     }else {
         showSuccess(input);
@@ -94,7 +81,7 @@ function checkLength(input, min ,max) {
 }
 
 function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
+    if(input1 !== input2) {
         showError(input2, 'Passwords do not match');
     }
 }
@@ -115,6 +102,30 @@ const saveMessages = (username,email,password,password_confirm) => {
         console.error("Error saving data: ", error);
     });
 };
+
+
+function submitForm(e){
+    e.preventDefault();
+
+    var username = getElementVal("username");
+    var email =  getElementVal("email");
+    var password = getElementVal("password");
+    var password_confirm = getElementVal("password_confirm");
+
+    console.log("Username:", username);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", password_confirm);
+
+    checkRequired([username,email, password, password_confirm]);
+    checkLength(password, 6, 16);
+    checkLength(password_confirm, 6, 16);
+    checkEmail(email);
+    checkPasswordMatch(password, password_confirm);
+    checkLength(username, 1, 20);
+    saveMessages(username,email,password,password_confirm);
+
+}
 
 
 
