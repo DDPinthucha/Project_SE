@@ -33,7 +33,6 @@
     </form>
     <script src="/search.js"></script>
     <script src="homepage_shuffle.js"></script>
-
         <center>
         <div class="content">
           <div class="content-left">
@@ -52,41 +51,49 @@
         <div class="reccom">
           <h2>ความรู้แนะนำ</h2>
         </div>
-    <div class="cards-container">
-        <div class="cards">
-          <img src="images/graph.jpg">
-          <div class="cards-content">
-            <h3>กราฟคืออะไร</h3>
-            <p> เป็นการแสดงผลของเซตของจุดที่แสดงผลอย่างเป็นระเบียบ จัดเป็นแผนภูมิประเภทหนึ่งที่ทำให้เราสามารถวิเคราะห์ข้อมูลต่าง ๆ ได้อย่างเห็นภาพที่ชัดเจน และสะดวกรวดเร็วมากขึ้น ยิ่งไปกว่านั้นคือกราฟยังช่วยให้เราสามารถแก้ระบบสมการที่สลับซับซ้อนได้อีกด้วย</p>
-            <a href="" class="btn">อ่านเพิ่มเติม</a>
-          </div>
-        </div>
-        <div class="cards">
-          <img src="images/tax.jpg">
-          <div class="cards-content">
-            <h3>การคำนวนภาษี</h3>
-            <p>การคำนวนภาษีที่หลายคนคิดว่าเป็นเรื่องไกลตัว แต่จริงๆแล้วเป็นสิ่งสำคัญที่ควรรู้ไว้เพื่อประโยชน์ของตนเอง มีวิธีคำนวนง่ายๆดังนี้</p>
-            <a href="" class="btn">อ่านเพิ่มเติม</a>
-          </div>
-        </div>
-        <div class="cards">
-          <img src="images/first_aid.jpg">
-          <div class="cards-content">
-            <h3>การปฐมพยาบาลเบื้องต้น</h3>
-            <p>การปฐมพยาบาลเบื้องต้น คือการดูแลผู้ป่วยหรือผู้ได้รับบาดเจ็บในกรณีเกิดเหตุฉุกเฉิน อาจะเป็นเพียงสิ่งเดียวที่สามารถช่วยเขาได้ ในบทความนี้อธิบายขั้นตอนการปฐมพยาบาลในกรณีฉุกเฉินต่างๆ เพื่อที่คุณสามารถปฐมพยาบาลให้ผู้อื่นได้เช่นกัน</p>
-            <a href="" class="btn">อ่านเพิ่มเติม</a>
-          </div>
-        </div>
-        <div class="cards">
-          <img src="images/earhquake.jpg">
-          <div class="cards-content">
-            <h3>วิธีเอาตัวรอดจากแผ่นดินไหว</h3>
-            <p>แผ่นดินไหวอาจเป็นเรื่องไกลตัวสำหรับหลายคน แต่การเกิดแผ่นดินไหวนั้นเป็นเรื่องที่เราไม่สามารถคาดเดาได้ ดังนั้นเราควรต้องรับมือและรู้วิธีเอาตัวรอดไว้เมื่อเจอเหตุการณ์แผ่นดินไหว</p>
-            <a href="" class="btn">อ่านเพิ่มเติม</a>
-          </div>
-        </div>
-        <div class="cards" id="cards">
-        </div>
+        <div class="cards-container" id="cards"></div>
+    
+        <script>
+          // Function to insert shuffled cards into the DOM
+          function insertShuffledCards() {
+              var dynamicCardsContainer = document.getElementById("cards");
+              console.log(shuffledCards)
+              shuffledCards.forEach(function (card) {
+                  var cardDiv = document.createElement("div");
+                  cardDiv.classList.add("cards");
+      
+                  var cardImage = document.createElement("img");
+                  cardImage.src = card.image;
+      
+                  var cardContentDiv = document.createElement("div");
+                  cardContentDiv.classList.add("cards-content");
+      
+                  var cardTitle = document.createElement("h3");
+                  cardTitle.textContent = card.title;
+      
+                  var cardContent = document.createElement("p");
+                  cardContent.textContent = card.content;
+      
+                  var cardLink = document.createElement("a");
+                  cardLink.href = card.link;
+                  cardLink.classList.add("btn");
+                  cardLink.textContent = "อ่านเพิ่มเติม";
+      
+                  cardContentDiv.appendChild(cardTitle);
+                  cardContentDiv.appendChild(cardContent);
+                  cardContentDiv.appendChild(cardLink);
+      
+                  cardDiv.appendChild(cardImage);
+                  cardDiv.appendChild(cardContentDiv);
+      
+                  dynamicCardsContainer.appendChild(cardDiv);
+              });
+          }
+      
+          // Call the function to insert shuffled cards
+            insertShuffledCards();   
+      </script>
     </head>
   </body>
+  
 </html>

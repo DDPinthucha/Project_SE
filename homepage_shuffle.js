@@ -2,126 +2,137 @@ var cards = [
     {
         image: "images/graph.jpg",
         title: "กราฟคืออะไร",
-        content: "เป็นการแสดงผลของเซตของจุดที่แสดงผลอย่างเป็นระเบียบ จัดเป็นแผนภูมิประเภทหนึ่งที่ทำให้เราสามารถวิเคราะห์ข้อมูลต่าง ๆ ได้อย่างเห็นภาพที่ชัดเจน และสะดวกรวดเร็วมากขึ้น ยิ่งไปกว่านั้นคือกราฟยังช่วยให้เราสามารถแก้ระบบสมการที่สลับซับซ้อนได้อีกด้วย",
-        link: "",
+        content: "กราฟคืออะไรและมีประโยชน์อย่างไร มารู้จักกัน!",
+        link: "ContentPage/FinanceSection/Invest.html",
     },
     {
         image: "images/tax.jpg",
         title: "การคำนวณภาษี",
-        content: "การคำนวนภาษีที่หลายคนคิดว่าเป็นเรื่องไกลตัว แต่จริงๆแล้วเป็นสิ่งสำคัญที่ควรรู้ไว้เพื่อประโยชน์ของตนเอง มีวิธีคำนวนง่ายๆดังนี้",
-        link: "",
+        content: "การคำนวนภาษีไม่ยากอย่างที่คิด! มาดูวิธีคำนวนกันเถอะ",
+        link: "ContentPage/FinanceSection/Invest.html",
     },
     {
-        image: "images/first_aid.jpg",
+        image: "images/FirstAid.jpg",
         title: "การปฐมพยาบาลเบื้องต้น",
-        content: "การปฐมพยาบาลเบื้องต้น คือการดูแลผู้ป่วยหรือผู้ได้รับบาดเจ็บในกรณีเกิดเหตุฉุกเฉิน อาจะเป็นเพียงสิ่งเดียวที่สามารถช่วยเขาได้ ในบทความนี้อธิบายขั้นตอนการปฐมพยาบาลในกรณีฉุกเฉินต่างๆ เพื่อที่คุณสามารถปฐมพยาบาลให้ผู้อื่นได้เช่นกัน",
-        link: "",
+        content: "ข้อเท้าพลิกควรทำยังไงดีนะ วันนี้เรามีคำตอบค่าาา",
+        link: "ContentPage/FinanceSection/Invest.html",
     },
     {
-        image: "images/earhquake",
+        image: "images/Earthquake.jpg",
         title: "วิธีเอาตัวรอดจากแผ่นดินไหว",
-        content: "แผ่นดินไหวอาจเป็นเรื่องไกลตัวสำหรับหลายคน แต่การเกิดแผ่นดินไหวนั้นเป็นเรื่องที่เราไม่สามารถคาดเดาได้ ดังนั้นเราควรต้องรับมือและรู้วิธีเอาตัวรอดไว้เมื่อเจอเหตุการณ์แผ่นดินไหว",
+        content: "แผ่นดินไหวอาจเป็นเรื่องไกลตัวสำหรับหลายคน แต่รู้ไว้ไม่เสียหายแถมยังสามารถช่วยเอาตัวรอดได้อีกด้วย!",
+        link: "ContentPage/FinanceSection/Invest.html",
+    },
+    {
+        image: "images/inves.jpg",
+        title: "มือใหม่เริ่มลงทุน",
+        content: "มือใหม่! เริ่มอ่าน! Fund Fact Sheet อย่างไรดี",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test5",
-        content: "test5",
+        image: "images/Stress.jpg",
+        title: "วิธีจัดการความเครียด",
+        content: "มัดรวม! 5 วิธีจัดการความเครียดแบบง่ายๆ",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test6",
-        content: "test6",
+        image: "images/Organ.jpg",
+        title: "8 อวัยวะเหล่านี้ กลัวอะไร?",
+        content: "อวัยวะในร่างกายของเราก็มีสิ่งที่กลัวเหมือนกันนะ แต่ว่าจะมีอะไรบ้างล่ะ?",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test7",
-        content: "test7",
+        image: "images/SkinHealth.jpg",
+        title: "สุขภาพผิวดี ทำง๊ายง่าย ด้วยตัวเอง!",
+        content: "สาว ๆ หนุ่ม ๆ มาดูแลสุขภาพผิวกันเถอะ!",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test8",
-        content: "test8",
+        image: "images/WriteEmail.jpg",
+        title: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ",
+        content: "มัดรวม ประโยคภาษาอังกฤษปัง ๆ สำหรับการเขียนอีเมล",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test9",
-        content: "test9",
+        image: "images/Vocab.jpg",
+        title: "สำนวนภาษาอังกฤษน่ารู้ได้ใช้บ่อยแน่นอน!",
+        content: "จดเลย! 8 สำนวนภาษาอังกฤษในชีวิตประจำ",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test10",
-        content: "test10",
+        image: "images/HowtoSpeak.jpg",
+        title: "เทคนิคการพูดจาโน้มน้าวใจ",
+        content: "รู้หรือไม่! การพูดจาโน้มน้าวเป็นจิตวิทยาในการทำให้ผู้ฟังรู้สึกคล้อยตามเรา จะมีอะไรบ้างนะ!?",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test11",
-        content: "test11",
+        image: "images/Courtesy.jpg",
+        title: "มารยาทตามหลักสากล",
+        content: "รีบดูเลย1? 13 มารยาทในสังคม ที่เราควรมี",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test12",
-        content: "test12",
+        image: "images/Social.jpg",
+        title: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม",
+        content: "ชาวอินโทรเวิร์ตฟังทางนี้ วิธีเข้าสังคมฉบับ คนโลกส่วนตัวสูงชอบอยู่คนเดียว!",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test13",
-        content: "tesst13",
+        image: "images/Menu.jpg",
+        title: "7 เมนูมื้อเย็น ช่วงลดน้ำหนัก",
+        content: "7 วัน 7 เมนูมื้อเย็น อร่อยไม่ซ้ำ",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test14",
-        content: "test14",
+        image: "images/Nutrient.jpg",
+        title: "สารอาหารที่จำเป็นต่อร่างกาย",
+        content: "อาหาร 9 ชนิดที่ควรกินทุกวัน!",
         link: "",
     },
     {
-        image: "images/earhquake",
-        title: "test15",
-        content: "test15",
+        image: "images/Grade4.jpg",
+        title: "เรียนอย่างไรให้ได้เกรด 4.00",
+        content: "เทคนิคลับที่อาจารย์ไม่รู้! เรียนอย่างไรให้ได้เกรด 4.00 ฉบับเด็กขี้เกียจ",
         link: "",
     },
+    {
+        image: "images/ManageTime.jpg",
+        title: "เคล็ดลับการบริหารเวลา",
+        content: "How to จัดการชีวิตช่วงที่งานท่วมหัวเต็มไปหมดดดด",
+        link: "",
+    },
+    {
+        image: "images/Plan.jpg",
+        title: "เทคนิควางแผนการเที่ยว",
+        content: "แชร์วิธีวางแผนการเที่ยวง่าย ๆ เดินทางสะสวกแน่นอน!",
+        link: "",
+    },
+    {
+        image: "images/Law.jpg",
+        title: "กฎหมายเบื้องต้น",
+        content: "กฎหมายที่ควรรู้ในชีวิตประจำวัน รู้ไว้จะได้ไม่โดนเอาเปรียบ!",
+        link: "",
+    },
+    {
+        image: "images/Prepare.jpg",
+        title: "จัดกระเป๋าเดินทางไปต่างประเทศอย่างไรดีนะ?",
+        content: "เทคนิคการจัดกระเป่าไปต่างประเทศฉบับคนไม่เคยไป ",
+        link: "",
+    },
+
 ];
 
-function shuffleCards(cards){
-    for(let i = cards.length - 1; i>0; i--){
-        const j = Math.floor(Math.random()*(i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
+// Function to shuffle the array randomly
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
 }
-function showCards(cards) {
-    // ฟังก์ชันแสดงเนื้อหา
-    const cardsContainer = document.getElementById("cards");
-    cardsContainer.innerHTML = "";
-  
-    // แสดงเนื้อหา 4 รายการแรก
-    for (let i = 0; i < 4; i++) {
-      const cards = cards[i];
-      const cardElement = document.createElement("div");
-      cardElement.classList.add("cards");
-      cardElement.innerHTML = `
-        <img src="${card.image}">
-        <div class="cards-content">
-          <h3>${card.title}</h3>
-          <p>${card.content}</p>
-          <a href="${card.link}" class="btn">อ่านเพิ่มเติม</a>
-        </div>
-      `;
-      cardsContainer.appendChild(cardElement);
-    }
-  }
-  window.onload = function() {
-    // สุ่มเรียงลำดับเนื้อหา
-    shuffleCards(cards);
-  
-    // แสดงเนื้อหา 4 รายการแรก
-    showCards(cards);
-  };
+
+// Shuffle the cards array
+var shuffledCards= shuffleArray(cards).slice(0,4);
+/* var shuffledCards2 = shuffleArray(cards).slice(0, 4);
+var shuffledCards3 = shuffleArray(cards).slice(0, 4);
+var shuffledCards4 = shuffleArray(cards).slice(0, 4); */
