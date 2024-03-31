@@ -70,7 +70,7 @@
     }
   }
 
-.navbar {
+  .navbar {
     display: flex;
     position: sticky;
     align-items: center;
@@ -80,15 +80,17 @@
     background-size: cover;
     color: black;
     padding: 10px 20px;
+    font-size: 20px;
   }
-
+  
   .nav-list {
     display: flex;
     list-style: none;
+    
   }
   
   .nav-list li {
-    margin-right: 20px;
+    margin-right: 2px;
   }
   
   .nav-list li:last-child {
@@ -98,7 +100,7 @@
   .nav-list li a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s ease-in-out;
   }
   

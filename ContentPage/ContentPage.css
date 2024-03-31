@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px 20px;
   color: black;
 }
@@ -50,7 +50,7 @@ header {
 .nav-list li a {
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -256,4 +256,31 @@ form.search-bar::after {
   padding: 5px;
   display: inline-block;
   border-style: dotted;
+}
+
+#like.liked {
+  /* กำหนดสไตล์สำหรับสถานะไลค์เต็ม */
+  opacity: 0.5; /* เปลี่ยนความทึบของรูปภาพ */
+}
+
+
+.love_text-container {
+  display: flex;
+  align-items: center;
+}
+
+.love_text-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.love_text-container img {
+  margin: 0 5px; /* กำหนดระยะห่างระหว่างรูปภาพ */
+}
+#counter {
+  margin: 0 5px; /* กำหนดระยะห่างระหว่างตัวเลขกับหัวใจ */
+  font-size: 15px; /* กำหนดขนาดตัวเลขใหญ่ขึ้น */
+  font-weight: bold; /* ทำให้ตัวเลขหนาขึ้น */
 }
