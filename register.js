@@ -23,17 +23,21 @@ const getElementVal = (id) => {
 
 //get FieldName
 function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+    console.log("inputwhat??",input);
+    return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
 function showError(input, message) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control error';
-    const small = formControl.querySelector('small');
-    if (small) {
-      small.innerText = message;
+    if (input && input.parentElement && input.parentElement.classList) {
+        const formControl = input.parentElement;
+        formControl.classList.add('form-control', 'error'); // เพิ่มคลาส 'error'
+        const small = formControl.querySelector('small');
+        if (small) {
+            small.innerText = message;
+        }
     }
-  }
+}
+
   
   //show success colour
   function showSuccess(input) {
