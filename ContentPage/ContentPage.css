@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px 20px;
   color: black;
 }
@@ -50,7 +50,7 @@ header {
 .nav-list li a {
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -205,4 +205,82 @@ form.search-bar::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.comment-section {
+  left: 50%; /* Position at the center */
+  transform: translateX(-50%);
+  padding: 5vw; /* Use padding for spacing */
+  margin-top: 15vw;
+  border-radius: 10vw;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+}
+
+.comment-section img {
+  width: 50px;
+  height: 45px;
+}
+
+.comment-section form {
+  margin-top: 10px; /* Add some space between the comments and the input field */
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px; /* Add some space between the input field and the button */
+}
+
+.comment-section button {
+  justify-content: center;
+  padding: 10px;
+  background: rgb(253, 157, 173);
+  color: white;
+  font-size: 16px; /* Reduce font size for better proportion */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Add some space between the input field and the button */
+}
+
+.comment-section button:hover {
+  background: rgb(169, 46, 222);
+}
+
+.comments #text{
+   border: solid 5px rgb(255, 255, 255);
+  padding: 5px;
+  display: inline-block;
+  border-style: dotted;
+}
+
+#like.liked {
+  /* กำหนดสไตล์สำหรับสถานะไลค์เต็ม */
+  opacity: 0.5; /* เปลี่ยนความทึบของรูปภาพ */
+}
+
+
+.love_text-container {
+  display: flex;
+  align-items: center;
+}
+
+.love_text-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.love_text-container img {
+  margin: 0 5px; /* กำหนดระยะห่างระหว่างรูปภาพ */
+}
+#counter {
+  margin: 0 5px; /* กำหนดระยะห่างระหว่างตัวเลขกับหัวใจ */
+  font-size: 15px; /* กำหนดขนาดตัวเลขใหญ่ขึ้น */
+  font-weight: bold; /* ทำให้ตัวเลขหนาขึ้น */
 }

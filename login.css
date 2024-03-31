@@ -220,8 +220,14 @@ a{
   transition: 0.3s ease;
 }
 
-.paccount a{
-  color:#4e34b6
+.account a {
+  color: #792dcf;
+  text-decoration: none;
+}
+
+.account a:hover {
+  color: #4e34b6;
+  text-decoration: underline;
 }
 
 .input-box i {
