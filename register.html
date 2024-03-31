@@ -19,7 +19,13 @@
     </nav>
     <div class="outer">
       <div class="inner">
+<<<<<<< HEAD
         <form action="" method="post">
+=======
+        <!--ใส่ข้อความ กล่องขาว-->
+        <form action="" method="post">
+          <!--กลับมาใส่ action ด้วย-->
+>>>>>>> 43f600bc033a7471d8f8b9b28b256b1df5690e6b
           <div class="form-img">
             <img src="images/witch_regis.png" alt="">
           </div>
@@ -27,45 +33,48 @@
             <div class="register">
                 <h1>ลงทะเบียน</h1>
               </div>
-          <div>
-            <label for="username"></label>
+          <div class="form-control">
+            <label for="username"><span class="req">*</span></label>
             <input
               type="text"
               name="username"
               id="username"
               placeholder="Type your username"
-              required
+              
             />
+            <small class="error-message">Error Message</small>
           </div>
-          <div>
-            <label for="email"></label>
+          <div class="form-control">
+            <label for="email"><span class="req">*</span></label>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Type your email"
-              required
+              
             />
+            <small class="error-message">Error Message</small>
           </div>
-          <div>
-            <label for="password"></label>
+          <div class="form-control">
+            <label for="password"><span class="req">*</span></label>
             <input
               type="password"
               name="password"
               id="password"
               placeholder="Type your password"
-              required
+              
             />
+            <small class="error-message">Error Message</small>
           </div>
-          <div>
-            <label for="password_confirm"></label>
+          <div class="form-control">
+            <label for="password_confirm"><span class="req">*</span></label>
             <input
               type="password"
               name="password_confirm"
               id="password_confirm"
               placeholder="Type confirm your password"
-              required
             />
+            <small class="error-message">Error Message</small>
           </div>
           <div id="submitbtt">
             <input type="submit" value="Register Now" id="submit" />

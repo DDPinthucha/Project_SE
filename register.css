@@ -160,4 +160,35 @@ input:focus{
   text-decoration: underline;
 }
 
+.form-control{
+  border: none !important;
+}
+
+.form-control.success input {
+  border-color: var(--succes-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);    
+}
+
+.form-control small{
+  color: var(--error-color);
+  position: absolute;
+  visibility: hidden;
+}
+
+.form-control.error small{
+  visibility: visible;
+}
+
+.req{
+  color: #FF0000;
+}
+
+:root{
+  --succes-color: #2ecc71;;
+  --error-color: #e74c3c;
+}
+
 

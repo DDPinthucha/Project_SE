@@ -8,9 +8,17 @@ function loadPage(pageIndex) {
     document.getElementById('content-image').src = page.image;
 }
 document.getElementById('link1').addEventListener('click', function() {
+<<<<<<< HEAD
     loadPage(0);
+=======
+    loadPage(0); 
+>>>>>>> 43f600bc033a7471d8f8b9b28b256b1df5690e6b
 });
 document.getElementById('link2').addEventListener('click', function() {
+<<<<<<< HEAD
     loadPage(1);
+=======
+    loadPage(1); 
+>>>>>>> 43f600bc033a7471d8f8b9b28b256b1df5690e6b
 });
 
