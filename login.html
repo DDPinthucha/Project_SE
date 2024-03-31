@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap"
+        rel="stylesheet">
+    <script type="module" src="login.js" defer></script>
     <title>LoginPage</title>
 </head>
+
 <body>
     <nav class="navbar">
         <header>LearnHuff</header>
         <ul class="nav-list">
-          <li><a href="#">Learn Huff คืออะไร</a></li>
-          <li>|</li>
-          <li><a href="#">หมวดหมู่</a></li>
+            <li><a href="#">Learn Huff คืออะไร</a></li>
+            <li>|</li>
+            <li><a href="#">หมวดหมู่</a></li>
         </ul>
-      </nav>
+    </nav>
     <div class="login-form">
         <div class="container">
             <div class="main">
@@ -26,25 +30,32 @@
                     <h2>เข้าสู่ระบบ</h2>
                     <h3>ยินดีต้อนรับสู่ LearnHuff</h3>
                     <h3>เข้าสู่ระบบเพื่อค้นหาสิ่งที่น่าสนใจสำหรับคุณ!</h3>
-                    <form action="" method="post">
-                        <input type="text" name="" placeholder="User name" required autofocus="" >
-                        <input type="password" name="" placeholder="User password" required autofocus="" >
+                    <form id="login-form" action="homepage.html" method="POST">
+                        <input type="text" name="username" placeholder="Email/Username" required autofocus="">
+                        <input type="password" name="password" placeholder="Password" required autofocus="">
                         <p class="account">Forgot your <a href="#">password?</a></p>
                         <p class="account">Don't Have An account? <a href="register.html">Register</a> </p>
-                        <button class="btn" type="submit">
+                        <button class="btn" type="submit" id="login-btn">
                             Login
-                        </button>
-
+                        </a></button>
                     </form>
-                    
                 </div>
                 <div class="form-img">
                     <img src="images/witch.png" alt="">
                 </div>
             </div>
         </div>
-
     </div>
+    <!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
 
+<!-- Firebase Realtime Database -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+
+<!-- Firebase Core (Always required) -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+    <script src="login.js"></script>
 </body>
+
 </html>
