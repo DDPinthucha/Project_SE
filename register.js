@@ -20,18 +20,84 @@ function submitForm(e){
     e.preventDefault();
 
     var username = getElementVal("username");
-    var email = getElementVal("email");
+    var email =  getElementVal("email");
     var password = getElementVal("password");
     var password_confirm = getElementVal("password_confirm");
 
-    if(password !== password_confirm) {
-        alert("Password and confirm password do not match");
-        return;
-    }
-
+    checkRequired([username,email, password, password_confirm]);
+    checkLength(password, 6, 16);
+    checkLength(password_confirm, 6, 16);
+    checkEmail(email);
+    checkPasswordMatch(password, password_confirm);
+    checkLength(username, 1, 20);
     saveMessages(username,email,password,password_confirm);
+
 }
 
+const getElementVal = (id) => {
+    return document.getElementById(id).value;
+}
+
+//get FieldName
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+function showError(input, message) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    if (small) {
+      small.innerText = message;
+    }
+  }
+  
+  //show success colour
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+    const smallError = formControl.querySelector('small');
+    if (smallError) {
+      smallError.innerText = '';
+    }
+}
+
+function checkRequired(inputArr) {
+    inputArr.forEach(function(input){
+        if(input.value.trim() === ''){
+            showError(input,`${getFieldName(input)} is required`)
+        }else {
+            showSuccess(input);
+        }
+    });
+  }
+  
+  
+  //check email is valid
+function checkEmail(input) {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(re.test(input.value.trim())) {
+          showSuccess(input)
+      }else {
+          showError(input,'Email is not invalid');
+      }
+}
+
+function checkLength(input, min ,max) {
+    if(input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    }else if(input.value.length > max) {
+        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+    }else {
+        showSuccess(input);
+    }
+}
+
+function checkPasswordMatch(input1, input2) {
+    if(input1.value !== input2.value) {
+        showError(input2, 'Passwords do not match');
+    }
+}
 
 const saveMessages = (username,email,password,password_confirm) => {
     var newDatalogin = DatabaseloginDB.push()
@@ -50,6 +116,6 @@ const saveMessages = (username,email,password,password_confirm) => {
     });
 };
 
-const getElementVal = (id) => {
-    return document.getElementById(id).value;
-}
+
+
+
