@@ -1,10 +1,21 @@
 {
-  "devDependencies": {
-    "jest": "^29.7.0",
-    "jsdom": "^24.0.0"
-  },
+
+  "name": "panp4n",
+  "version": "1.0.0",
+  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "main": "categorypage.js",
   "scripts": {
     "test": "jest"
+<<<<<<< HEAD
 
 }
+=======
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+>>>>>>> bce9f2f078bcec3c3118e8abb6481b7c66d83397
 }

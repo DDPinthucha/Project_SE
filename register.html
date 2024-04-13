@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <nav class="navbar">
@@ -27,12 +28,13 @@
           <div class="form-img">
             <img src="images/witch_regis.png" alt="">
           </div>
-        <div  class="register-form">
+          <div  class="register-form">
             <div class="register">
                 <h1>ลงทะเบียน</h1>
-              </div>
+            </div>
+
           <div class="form-control">
-            <label for="username"><span class="req">*</span></label>
+            <label for="username"></label><span class="req">*</span>
             <input
               type="text"
               name="username"
@@ -40,8 +42,9 @@
               placeholder="Type your username">
             <small class="error-message">Error Message</small>
           </div>
+
           <div class="form-control">
-            <label for="email"><span class="req">*</span></label>
+            <label for="email"></label><span class="req">*</span>
             <input
               type="email"
               name="email"
@@ -49,8 +52,9 @@
               placeholder="Type your email">
             <small class="error-message">Error Message</small>
           </div>
+
           <div class="form-control">
-            <label for="password"><span class="req">*</span></label>
+            <label for="password"></label><span class="req">*</span>
             <input
               type="password"
               name="password"
@@ -58,8 +62,9 @@
               placeholder="Type your password">
             <small class="error-message">Error Message</small>
           </div>
+
           <div class="form-control">
-            <label for="password_confirm"><span class="req">*</span></label>
+            <label for="password_confirm"></label><span class="req">*</span>
             <input
               type="password"
               name="password_confirm"
@@ -67,10 +72,12 @@
               placeholder="Type confirm your password">
             <small class="error-message">Error Message</small>
           </div>
+
           <div id="submitbtt">
             <input type="submit" value="Register Now" id="submit" />
             <p class="account">Already have an account? <a href="login.html">Sing up</a> </p>
           </div>
+          
         </div>
         </form>
       </div>
