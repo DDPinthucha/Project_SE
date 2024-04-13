@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnHuff</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/ContentPage/ContentPage.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +17,11 @@
   </head>
   <body>
     <nav class="navbar">
-      <header>LearnHuff</header>
+      <header><a href="/homepage.html">LearnHuff</a></header> <!-- add link -->
       <ul class="nav-list">
-        <li><a href="#">Learn Huff คืออะไร</a></li>
+        <li><a href="/homepage.html">Learn Huff คืออะไร</a></li>
         <li><a href="">|</a></li>
-        <li><a href="#">หมวดหมู่</a></li>
+        <li><a href="/categorypage.html">หมวดหมู่</a></li>
       </ul>
     </nav>
 
@@ -69,7 +71,7 @@
           <br />
         </div>
         <div class="love_text-container">
-          <button type="submit" onclick="liked()">
+          <button type="button" onclick="checkAndLike()">
             <img src="/images/heart.png" id="like" />
             <span id="counter">0</span>
           </button>
@@ -79,8 +81,7 @@
         
 </body>
   <script src="/like.js"></script>
+
 </html>
-
-
 
 
