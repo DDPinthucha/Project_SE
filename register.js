@@ -17,39 +17,42 @@ var DatabaseloginDB = firebase.database().ref('Databaselogin');
 document.getElementById('register-form').addEventListener('submit', submitForm);
 
 
+
 const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
 
+var username = getElementVal("username");
+var email =  getElementVal("email");
+var password = getElementVal("password");
+var password_confirm = getElementVal("password_confirm");
+
 //get FieldName
 function getFieldName(input) {
-    console.log("inputwhat??",input);
     return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
-function showError(input, message) {
-    if (input && input.parentElement && input.parentElement.classList) {
-        const formControl = input.parentElement;
-        formControl.classList.add('form-control', 'error'); // เพิ่มคลาส 'error'
-        const small = formControl.querySelector('small');
-        if (small) {
-            small.innerText = message;
-        }
+//Show input error messages
+function showerror(input, message) {
+    const formcontrol = input.parentElement;
+    if (formcontrol) {
+      formcontrol.className = 'form-control error';
+      const small = formcontrol.querySelector('small');
+      if (small) {
+        small.innerText = message;
+      }
     }
-}
-
+  }
   
   //show success colour
   function showSuccess(input) {
     const formControl = input.parentElement;
-    if (formControl) { // เพิ่มการตรวจสอบว่า formControl ไม่เป็น undefined
-        formControl.className = 'form-control success';
-        const smallError = formControl.querySelector('small');
-        if (smallError) {
-            smallError.innerText = '';
-        }
+    formControl.className = 'form-control success';
+    const smallError = formControl.querySelector('small');
+    if (smallError) {
+      smallError.innerText = '';
     }
-}
+  }
 
 function checkRequired(inputArr) {
     inputArr.forEach(function(input){
@@ -108,13 +111,10 @@ const saveMessages = (username,email,password,password_confirm) => {
 };
 
 
+
+
 function submitForm(e){
     e.preventDefault();
-
-    var username = getElementVal("username");
-    var email =  getElementVal("email");
-    var password = getElementVal("password");
-    var password_confirm = getElementVal("password_confirm");
 
     console.log("Username:", username);
     console.log("Email:", email);
@@ -122,15 +122,10 @@ function submitForm(e){
     console.log("Confirm Password:", password_confirm);
 
     checkRequired([username,email, password, password_confirm]);
+    checkLength(username, 1, 20);
     checkLength(password, 6, 16);
     checkLength(password_confirm, 6, 16);
     checkEmail(email);
     checkPasswordMatch(password, password_confirm);
-    checkLength(username, 1, 20);
     saveMessages(username,email,password,password_confirm);
-
 }
-
-
-
-
