@@ -16,8 +16,6 @@ var DatabaseloginDB = firebase.database().ref('Databaselogin');
 
 document.getElementById('register-form').addEventListener('submit', submitForm);
 
-
-
 const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
@@ -27,13 +25,14 @@ var email =  getElementVal("email");
 var password = getElementVal("password");
 var password_confirm = getElementVal("password_confirm");
 
+
 //get FieldName
 function getFieldName(input) {
     return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
 //Show input error messages
-function showerror(input, message) {
+function showError(input, message) {
     const formcontrol = input.parentElement;
     if (formcontrol) {
       formcontrol.className = 'form-control error';
@@ -43,10 +42,11 @@ function showerror(input, message) {
       }
     }
   }
+
   
   //show success colour
   function showSuccess(input) {
-    const formControl = input.parentElement;
+    const formControl = input.parentNode;
     formControl.className = 'form-control success';
     const smallError = formControl.querySelector('small');
     if (smallError) {
@@ -115,6 +115,11 @@ const saveMessages = (username,email,password,password_confirm) => {
 
 function submitForm(e){
     e.preventDefault();
+    
+    var username = getElementVal("username");
+    var email =  getElementVal("email");
+    var password = getElementVal("password");
+    var password_confirm = getElementVal("password_confirm");
 
     console.log("Username:", username);
     console.log("Email:", email);
@@ -129,3 +134,4 @@ function submitForm(e){
     checkPasswordMatch(password, password_confirm);
     saveMessages(username,email,password,password_confirm);
 }
+
