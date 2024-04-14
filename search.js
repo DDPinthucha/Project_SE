@@ -33,6 +33,9 @@ function handleSearch() {
         return false; // ส่งค่าฟอร์มไปที่ URL ที่ระบุในแอททริบิวต์ action
     }
 }
+// เรียกใช้งานฟังก์ชัน showSearchSuggestions() เมื่อหน้าเว็บโหลด
+document.addEventListener("DOMContentLoaded", showSearchSuggestions)
+
 
 function showSearchSuggestions() {
     const topics = [
@@ -66,5 +69,4 @@ function showSearchSuggestions() {
     });
 }
 
-// เรียกใช้งานฟังก์ชัน showSearchSuggestions() เมื่อหน้าเว็บโหลด
-document.addEventListener("DOMContentLoaded", showSearchSuggestions);
+;
