@@ -197,17 +197,25 @@ let allSection = [
     },
 ]
 
-document.addEventListener("DOMContentLoaded", function() {
-    show(window.location.hash.substring(1)); // แสดงการ์ดสำหรับส่วนที่ถูกเลือกเมื่อหน้าโหลดเสร็จ
-});
+window.onload = function(){
+    show(window.location.hash.substring(1));
+};
+/*document.addEventListener("DOMContentLoaded", function() {
+    show(window.location.hash.substring(1));  // แสดงการ์ดสำหรับส่วนที่ถูกเลือกเมื่อหน้าโหลดเสร็จ
+});*/
 
 function show(section) {
+    console.log(section);
     let showCard = document.getElementById("card-for-section");
     showCard.innerHTML = ""; // เคลียร์เนื้อหาเก่า
 
     cards.forEach(card => {
         if (card.type === section) {
-            showCard.innerHTML += `<div class="card-container">
+            const sectionHead = getSectionHead(section);
+            showCard.innerHTML += `<div class="reccom">
+            <h2>${sectionHead}</h2>
+          </div>
+            <div class="card-container">
                 <div class="card">
                     <img src="${card.image}">
                     <div class="card-content">
@@ -219,4 +227,9 @@ function show(section) {
             </div>`;
         }
     });
+}
+
+function getSectionHead(section) {
+    const sectionInfo = allSection.find(item => item.section === section);
+    return sectionInfo ? sectionInfo.head : '';
 }
