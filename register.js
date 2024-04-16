@@ -17,36 +17,38 @@ var DatabaseloginDB = firebase.database().ref('Databaselogin');
 document.getElementById('register-form').addEventListener('submit', submitForm);
 
 const getElementVal = (id) => {
-    return document.getElementById(id).value;
+    return document.getElementById(id);
 }
 
+var form = getElementVal("register-form");
 var username = getElementVal("username");
 var email =  getElementVal("email");
 var password = getElementVal("password");
 var password_confirm = getElementVal("password_confirm");
-
+var isSuccess = true;
 
 //get FieldName
 function getFieldName(input) {
-    return input.charAt(0).toUpperCase() + input.slice(1);
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 //Show input error messages
 function showError(input, message) {
+    isSuccess = false;
     const formcontrol = input.parentElement;
-    if (formcontrol) {
       formcontrol.className = 'form-control error';
       const small = formcontrol.querySelector('small');
       if (small) {
         small.innerText = message;
+
       }
     }
-  }
+  
 
   
   //show success colour
   function showSuccess(input) {
-    const formControl = input.parentNode;
+    const formControl = input.parentElement;
     formControl.className = 'form-control success';
     const smallError = formControl.querySelector('small');
     if (smallError) {
@@ -56,7 +58,7 @@ function showError(input, message) {
 
 function checkRequired(inputArr) {
     inputArr.forEach(function(input){
-        if(input.trim() === ''){
+        if(input.value.trim() === ''){
             showError(input,`${getFieldName(input)} is required`)
         } else {
             showSuccess(input);
@@ -69,7 +71,7 @@ function checkRequired(inputArr) {
 function checkEmail(input) {
     console.log("emailorcheck:", input);
       const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(re.test(input.trim())) {
+      if(re.test(input.value.trim())) {
           showSuccess(input)
       }else {
           showError(input,'Email is not invalid');
@@ -78,9 +80,9 @@ function checkEmail(input) {
 
 function checkLength(input, min ,max) {
     console.log("input:", input);
-    if(input.length < min) {
+    if(input.value.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.length > max) {
+    }else if(input.value.length > max) {
         showError(input, `${getFieldName(input)} must be les than ${max} characters`);
     }else {
         showSuccess(input);
@@ -88,7 +90,7 @@ function checkLength(input, min ,max) {
 }
 
 function checkPasswordMatch(input1, input2) {
-    if(input1 !== input2) {
+    if(input1.value !== input2.value) {
         showError(input2, 'Passwords do not match');
     }
 }
@@ -115,7 +117,8 @@ const saveMessages = (username,email,password,password_confirm) => {
 
 function submitForm(e){
     e.preventDefault();
-    
+    isSuccess = true;
+
     var username = getElementVal("username");
     var email =  getElementVal("email");
     var password = getElementVal("password");
@@ -132,6 +135,11 @@ function submitForm(e){
     checkLength(password_confirm, 6, 16);
     checkEmail(email);
     checkPasswordMatch(password, password_confirm);
-    saveMessages(username,email,password,password_confirm);
+
+    if(isSuccess){
+        saveMessages(username,email,password,password_confirm);
+    }
 }
+
+form.addEventListener("submit",submitForm)
 
