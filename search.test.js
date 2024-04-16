@@ -1,49 +1,44 @@
-describe('Search Suggestions Test', () => {
-  // Mocking the DOM for testing
-  before(() => {
-      const jsdom = require('jsdom');
-      const { JSDOM } = jsdom;
-      const dom = new JSDOM('<!DOCTYPE html><html><body><div id="search-suggestions"></div></body></html>');
+const assert = require("assert");
+const { Builder, By, Key, until } = require("selenium-webdriver");
 
-      global.document = dom.window.document;
-      global.window = dom.window;
+jest.setTimeout(20000); // เปลี่ยน timeout เป็น 20000 milliseconds (20 วินาที)
+
+describe("Search Functionality", function () {
+  it("should redirect to the correct URL if search query is found", async function () {
+    let driver = await new Builder().forBrowser("chrome").build();
+    try {
+      await driver.get("C:\\Users\\Deede\\panp4n\\ContentPage\\FinanceSection\\Invest.html");
+
+      // เลือกข้อมูลการค้นหา
+      await driver.findElement(By.css(".search-bar input[name='search']")).sendKeys("มือใหม่หัดเริ่มลงทุน", Key.RETURN);
+
+      // รอให้หน้าเว็บโหลดเสร็จสมบูรณ์
+      await driver.wait(until.urlContains("/ContentPage/FinanceSection/Invest.html"), 10000);
+
+      // ตรวจสอบ URL หลังจากค้นหา
+      const currentURL = await driver.getCurrentUrl();
+      expect(currentURL).toContain("/ContentPage/FinanceSection/Invest.html");
+    } finally {
+      await driver.quit();
+    }
   });
+  it("should show an alert if search query is not found", async function () {
+    let driver = await new Builder().forBrowser("chrome").build();
+    try {
+      await driver.get("C:\\Users\\Deede\\panp4n\\homepage.html"); // เปลี่ยน URL ของเว็บไปที่หน้าที่มีฟอร์มค้นหา
 
-  it('should populate search suggestions in the datalist', () => {
-      // Call the function to populate search suggestions
-      showSearchSuggestions();
+      // เลือกข้อมูลการค้นหา
+      await driver.findElement(By.css(".search-bar input[name='search']")).sendKeys("คำค้นหาที่ไม่มีในรายการ", Key.RETURN);
 
-      // Expected topics
-      const expectedTopics = [
-          "วิธีการคำนวณภาษีเบื้องต้น",
-          "มือใหม่เริ่มลงทุน",
-          "การปฐมพยาบาลเบื้องต้น",
-          "วิธีการจัดการความเครียด",
-          "อวัยวะเหล่านี้กลัวอะไร?",
-          "สุขภาพผิวดี ทำได้ง่ายๆ",
-          "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ",
-          "สำนวนภาษาอังกฤษน่ารู้",
-          "เทคนิคการพูดจาโน้มน้าวใจ",
-          "มารยาทตามหลักสากล",
-          "วิธีสร้างความมั่นใจให้คนขี้อาย",
-          "เมนูมื้อเย็น ช่วงลดน้ำหนัก",
-          "สารอาหารที่จำเป็นต่อร่างกาย",
-          "กราฟคืออะไร",
-          "เรียนยังไง ให้ได้ 4.00",
-          "เคล็ดลับการบริหารเวลา",
-          "แชร์วิธีทำแพลนเที่ยว",
-          "กฎหมายเบื้องต้น",
-          "วิธีเอาตัวรอดจากแผ่นดินไหว",
-          "จัดกระเป๋าเดินทางไปต่างประเทศ"
-      ];
+      // รอให้ Alert แสดงขึ้น
+      await driver.wait(until.alertIsPresent(), 5000);
 
-      // Get populated options in datalist
-      const datalist = document.getElementById('search-suggestions');
-      const options = Array.from(datalist.children).map(option => option.value);
-
-      // Check if all expected topics are in the options
-      expectedTopics.forEach(topic => {
-          expect(options).toContain(topic);
-      });
+      // ตรวจสอบ Alert
+      const alert = await driver.switchTo().alert();
+      const alertText = await alert.getText();
+      expect(alertText).to.equal("ขออภัย ไม่มีรายการที่ท่านต้องการค้นหา"); // ใช้ expect จาก chai เปรียบเทียบข้อความใน alert
+    } finally {
+      await driver.quit();
+    }
   });
 });
