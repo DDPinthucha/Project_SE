@@ -233,3 +233,13 @@ function getSectionHead(section) {
     const sectionInfo = allSection.find(item => item.section === section);
     return sectionInfo ? sectionInfo.head : '';
 }
+
+for (let i = 0; i < allSection.length; i++) {
+    const section = allSection[i];
+    const link = links[i];
+    link.addEventListener("click",function(){
+        localStorage.setItem('section',section.section)
+    });
+console.log(link);
+}
+
