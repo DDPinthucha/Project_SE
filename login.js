@@ -16,21 +16,6 @@ var DatabaseLogin = firebase.database().ref('Databaselogin');
 console.log("Login database")
 console.log(DatabaseLogin)
 
-// function loginForm(e) {
-//     e.preventDefault();
-
-//     var username = getElementVal("username");
-//     var password = getElementVal("password");
-
-//     console.log(username)
-//     console.log(password)
-
-//     // checkCredentials(username, password);
-//     // return false
-// }
-
-// document.getElementById('login-form').addEventListener('submit', loginForm);
-
 function submitForm() {
     console.log("submitForm");
     var username = document.getElementById("username").value;
