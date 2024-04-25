@@ -44,7 +44,7 @@ function checkCredentials2(username, password) {
         });
 
         if (isAuthenticated) {
-            alert("Login successful");// แสดง Alert เมื่อเข้าสู่ระบบสำเร็จ
+            //alert("Login successful");// แสดง Alert เมื่อเข้าสู่ระบบสำเร็จ
             window.location.href = "homepage.html";
         } else {
             alert("Incorrect username or password"); // แสดง Alert เมื่อไม่สามารถเข้าสู่ระบบได้

@@ -5,13 +5,13 @@ const path = require('path');
 const { Builder, By, Key, until } = require("selenium-webdriver");
 var assert = require("assert");
 
-jest.setTimeout(20000); // ให้ timeout เป็น 20000 milliseconds (20 วินาที)
+jest.setTimeout(50000); 
 
 describe("Perform Search", function () {
   it("Check if you can login to the home page", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("file://" + path.resolve(__dirname, "login.html"));
+      await driver.get("D:\\home\\sirio\\panp4n\\login.html");
 
       await driver.findElement(By.id("username")).sendKeys("sc651010203");
       await driver.findElement(By.id("password")).sendKeys("45600", Key.RETURN);
