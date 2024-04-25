@@ -1,3 +1,4 @@
+
 function handleSearch() {
     const searchQuery = document.querySelector('.search-bar input[name="search"]').value.trim();
     const topics = [
@@ -67,6 +68,6 @@ function showSearchSuggestions() {
         option.value = topic;
         datalist.appendChild(option);
     });
-}
+    
 
-;
+};
