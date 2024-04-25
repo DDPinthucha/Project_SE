@@ -6,27 +6,20 @@ global.document = dom.window.document;
 
 jest.setTimeout(30000); // เพิ่ม timeout ที่ 30 วินาที
 
-describe("Navigation", function () {
-  it("should navigate from CategoryPage to HomePage when LearnHuff button is clicked", async function () {
-    let driver = await new Builder().forBrowser("chrome").build();
-    try {
-      // Load the CategoryPage
-      await driver.get("C:\\Users\\Deede\\panp4n\\CategoryPage.html");
 
-      // Click on the LearnHuff button in the Navbar
-      await driver.findElement(By.css(".navbar")).click();
-
-      // Wait until HomePage is loaded
-      await driver.wait(async function() {
+  describe("Search Functionality", function () {
+    it("should redirect to the correct URL if search query is found", async function () {
+      let driver = await new Builder().forBrowser("chrome").build();
+      try {
+        await driver.get("C:\\Users\\Deede\\panp4n\\ContentPage\\FinanceSection\\Invest.html");
+        await driver.findElement(By.css(".search-bar input[name='search']"))
+        .sendKeys("มือใหม่หัดเริ่มลงทุน", Key.RETURN);
+        await driver.wait(until.urlContains("/ContentPage/FinanceSection/Invest.html"), 10000);
         const currentURL = await driver.getCurrentUrl();
-        return currentURL.includes("/HomePage.html");
-      }, 30000); // เพิ่ม timeout ที่ 30 วินาที
-
-      // Check if the URL contains HomePage
-      const currentURL = await driver.getCurrentUrl();
-      expect(currentURL).toContain("/HomePage.html");
-    } finally {
-      await driver.quit();
-    }
-  });
+        expect(currentURL).toContain("/ContentPage/FinanceSection/Invest.html");
+      } finally {
+        await driver.quit();
+      }
+    });
+  
 });
