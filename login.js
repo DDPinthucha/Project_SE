@@ -16,21 +16,6 @@ var DatabaseLogin = firebase.database().ref('Databaselogin');
 console.log("Login database")
 console.log(DatabaseLogin)
 
-// function loginForm(e) {
-//     e.preventDefault();
-
-//     var username = getElementVal("username");
-//     var password = getElementVal("password");
-
-//     console.log(username)
-//     console.log(password)
-
-//     // checkCredentials(username, password);
-//     // return false
-// }
-
-// document.getElementById('login-form').addEventListener('submit', loginForm);
-
 function submitForm() {
     console.log("submitForm");
     var username = document.getElementById("username").value;
@@ -59,7 +44,7 @@ function checkCredentials2(username, password) {
         });
 
         if (isAuthenticated) {
-            alert("Login successful");// แสดง Alert เมื่อเข้าสู่ระบบสำเร็จ
+            //alert("Login successful");// แสดง Alert เมื่อเข้าสู่ระบบสำเร็จ
             window.location.href = "homepage.html";
         } else {
             alert("Incorrect username or password"); // แสดง Alert เมื่อไม่สามารถเข้าสู่ระบบได้

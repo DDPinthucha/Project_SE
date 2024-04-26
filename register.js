@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
     apiKey: "AIzaSyBz4T_JWDa69uM36SSofJYQbtPPUn7PvGk",
     authDomain: "databaselogin-85385.firebaseapp.com",
@@ -114,7 +115,6 @@ const saveMessages = (username,email,password,password_confirm) => {
 
 
 
-
 function submitForm(e){
     e.preventDefault();
     isSuccess = true;
@@ -142,4 +142,3 @@ function submitForm(e){
 }
 
 form.addEventListener("submit",submitForm)
-

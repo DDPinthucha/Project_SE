@@ -133,6 +133,3 @@ function shuffleArray(array) {
 
 // Shuffle the cards array
 var shuffledCards= shuffleArray(cards).slice(0,4);
-/* var shuffledCards2 = shuffleArray(cards).slice(0, 4);
-var shuffledCards3 = shuffleArray(cards).slice(0, 4);
-var shuffledCards4 = shuffleArray(cards).slice(0, 4); */
