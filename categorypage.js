@@ -42,5 +42,4 @@ for (let i = 0; i < allSection.length; i++) {
     link.addEventListener("click",function(){
         localStorage.setItem('section',section.section)
     });
-console.log(link);
 }
