@@ -2,31 +2,33 @@
 function handleSearch() {
     const searchQuery = document.querySelector('.search-bar input[name="search"]').value.trim();
     const topics = [
-        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "กราฟคืออะไร", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Format_ContentPage.html" },
-        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Format_ContentPage.html" }
+        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Finance",detail:"tax"},
+        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Format_ContentPage.html",section:"Finance",detail:"invest" },
+        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"FirstAid" },
+        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"Stress" },
+        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"Organ" },
+        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"SkinHealth" },
+        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"WriteEmail" },
+        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"Vocab" },
+        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"HowtoSpeak" },
+        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Format_ContentPage.html",section:"Socializing",detail:"Courtesy" },
+        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Format_ContentPage.html",section:"Socializing",detail:"Social" },
+        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Format_ContentPage.html",section:"Food",detail:"Menu" },
+        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Format_ContentPage.html",section:"Food",detail:"Nutrient" },
+        { query: "กราฟคืออะไร", url: "/ContentPage/Format_ContentPage.html",section:"Learning",detail:"GraphSum" },
+        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Format_ContentPage.html",section:"Learning",detail:"Grade4" },
+        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/Format_ContentPage.html",section:"Manage",detail:"ManageTime"},
+        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Format_ContentPage.html",section:"Manage",detail:"Plan"},
+        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Law"},
+        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Earthquake" },
+        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Prepare" }
 
     ];
 
     const topic = topics.find(topic => topic.query === searchQuery);
     if (topic) {
+        localStorage.setItem('section', topic.section);
+        localStorage.setItem('detail', topic.detail);
         window.location.href = topic.url;
         return false; // ป้องกันฟอร์มส่งค่าไปที่ URL ที่ระบุในแอททริบิวต์ action
     } else {
@@ -71,3 +73,4 @@ function showSearchSuggestions() {
     
 
 };
+

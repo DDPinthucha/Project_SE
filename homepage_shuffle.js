@@ -227,48 +227,69 @@ let allSection = [
     },
 ]
 
-// Function to shuffle the array randomly
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array
-}
-
-// Shuffle the cards array
-var shuffledCards= shuffleArray(cards).slice(0,4);
 
 
 window.onload = function(){
     const section = localStorage.getItem('section');
-    show(section, () =>{
-        const links_content = document.querySelectorAll('.btn')
-         
-        for (let i = 0; i < allSection.length; i++) {
-            const contents = allSection[i];
-            if(section === contents.section){
-                for (let j = 0; j < contents.allcontent.length; j++) {
-                    const detail = contents.allcontent[j];
-                    const linkCon = links_content[j];
-                    console.log(detail)
-                    console.log(linkCon)
-                    linkCon.addEventListener("click",function(){
-                        localStorage.setItem('detail',detail)
-                });
-                    
-                }
-            }
-        
+    
+    show(section, () => {
+        const links_content = document.querySelectorAll('.btn');
+        for (let j = 0; j < cards.length; j++) {
+            const detail = contents.allcontent[j];
+            const linkCon = links_content[j];
+            console.log(detail);
+            console.log(linkCon);
+            linkCon.addEventListener("click",function(){
+                localStorage.setItem('detail',detail);
+            });   
+            
+            
         }
-
-        });
+       
+    });
 };
 
-
-
-function show(section, callback) {
+function show(section,callback) {
+    let showCard = document.getElementById("cards");
+    showCard.innerHTML = ""; // เคลียร์เนื้อหาเก่า
+    
+    const allCards = [];
+    cards.forEach(card => {
+        allCards.push(card);
+    });
+    
+    // สุ่มการ์ดทุกรอบ
+    const shuffledCards = shuffleArray(allCards);
+    // เลือกแค่ 4 ใบ
+    const selectedCards = shuffledCards.slice(0, 4);
+    selectedCards.forEach(card => {
+            showCard.innerHTML += 
+            `<div class="cards">
+                <img src="${card.image}">
+                <div class="cards-content">
+                    <h3>${card.title}</h3>
+                    <p>${card.content}</p>
+                    <a href="${card.link}" class="btn" id="${card.id_sec}">อ่านเพิ่มเติม</a>
+                </div>
+            </div>`;
+        
+       
+    });
 
     if (callback) callback();
 }
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[j], array[i]] = [array[i], array[j]];
+    }
+    return array;
+}
+
+
+module.exports = {
+    cards: cards,
+    shuffleArray: shuffleArray
+};
 
