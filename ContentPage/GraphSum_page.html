@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnHuff</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/ContentPage/ContentPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <header>LearnHuff</header>
+      <ul class="nav-list">
+        <li><a href="/homepage.html">Learn Huff คืออะไร</a></li>
+        <li><a href="">|</a></li>
+        <li><a href="/categorypage.html">หมวดหมู่</a></li>
+      </ul>
+    </nav>
+
+<!--search-->
+    <form class="search-bar" action="#" method="GET" onsubmit="return handleSearch()">
+      <input type="text" list="search-suggestions" autocomplete="off" placeholder="ค้นหาความรู้ที่สนใจ!" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      <datalist id="search-suggestions"></datalist>
+    </form>
+    <script src="/search.js"></script>
+
+  
+      <br>
+    </div>
+    <div class="purple-box">
+      <div class="container">
+        <div class="left-side">
+          <h1>กราฟคืออะไร</h1>
+          <br />
+          <img
+            src="/images/GraphSum.jpg"
+            alt="Image"
+            width="200"
+            height="200"
+          />
+        </div>
+        <hr class="divider" />
+        <div class="right-side">
+          <h4>มารู้จักกับกราฟกัน คืออะไร และมีประโยชน์อย่างไรกันนะ?</h4>
+         
+          <p>กราฟ เป็นการแสดงผลของเซตของจุดที่แสดงผลอย่างเป็นระเบียบ จัดเป็นแผนภูมิประเภท</p>
+          <p>หนึ่งที่ทำให้เราสามารถวิเคราะห์ข้อมูลต่าง ๆ ได้อย่างเห็นภาพ และสะดวกรวดเร็วมากขึ้น ยิ่งไปกว่า</p>
+          <p>นั้นคือกราฟยังช่วยให้เราสามารถแก้ระบบสมการที่สลับซับซ้อนได้อีกด้วย</p>
+          <br />
+          <h4>กราฟเส้นตรงคืออะไร?</h4>
+          <p>กราฟเส้นตรง คือ กราฟที่เขียนในรูปของ  Ax + By + C = 0</p>
+          <p>สมการเส้นตรงในรูป Ax + By + C = 0 สมการนี้สามารถเขียนในอีกรูปคือ y = mx + c</p>
+          <p>ซึ่ง m = ความชัน และ c = ระยะตัดแกน  y (Y – Intercept)</p>
+
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="love_text-container">
+            <button type="button" onclick="like()">
+              <img src="/images/heart.png" id="counter" />
+              <span id="currentLikes"></span>
+            </button>
+            <br />
+            <img
+              src="/images/comment.png"
+              alt="heart.png"
+              width="50"
+              height="45"
+            />
+          </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/like.js"></script>
+        <script src="ContentPage.js"></script>
+      </body>
+      <script>
+        function like() {
+          // เพิ่มจำนวนไลค์
+          let currentLikes = parseInt(localStorage.getItem("likes")) || 0;
+          currentLikes++;
+          document.getElementById("counter").textContent = currentLikes;
+          document.getElementById("currentLikes").textContent = currentLikes;
+    
+          // บันทึกจำนวนไลค์ลงใน Local Storage
+          localStorage.setItem("likes", currentLikes.toString());
+        }
+      </script>
+    </html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnHuff</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/ContentPage/ContentPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <header>LearnHuff</header>
+      <ul class="nav-list">
+        <li><a href="/homepage.html">Learn Huff คืออะไร</a></li>
+        <li><a href="">|</a></li>
+        <li><a href="/categorypage.html">หมวดหมู่</a></li>
+      </ul>
+    </nav>
+
+<!--search-->
+    <form class="search-bar" action="#" method="GET" onsubmit="return handleSearch()">
+      <input type="text" list="search-suggestions" autocomplete="off" placeholder="ค้นหาความรู้ที่สนใจ!" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      <datalist id="search-suggestions"></datalist>
+    </form>
+    <script src="/search.js"></script>
+
+  
+      <br>
+    </div>
+    <div class="purple-box">
+      <div class="container">
+        <div class="left-side">
+          <h1>วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม</h1>
+          <br />
+          <img
+            src="/images/Social.jpg"
+            alt="Image"
+            width="200"
+            height="200"
+          />
+        </div>
+        <hr class="divider" />
+        <div class="right-side">
+          <h3>วิธีเข้าสังคมฉบับ คนโลกส่วนตัวสูงชอบอยู่คนเดียว!</h3>
+         
+          <p>ทุกๆคนเจอปัญหานี้อยู่หรือเปล่าคะ ที่ไม่ค่อยกล้าเข้าสังคมใหม่ๆ เรามีวิธีที่สามารถผ่านมันมาได้ ไปดูกันเลย</p>
+          <p>1. เริ่มทุกอย่างด้วยรอยยิ้ม จริงๆแล้วการยิ้มเป็นอะไรที่ดีที่สุดไม่ว่าจะในสถานการณ์อะไรแบบ</p>
+          <p>ไหนก็ตามเป็นสิ่งที่ง่ายที่สุดเลย!</p>
+          <p>2. อาจจะลองปรับเปลี่ยนความคิดดูทัศนคติ ถ้าใจเรายังไม่กล้าและยังคิดว่าตัวเองทำไม่ได้อาจ</p>
+          <p>จะทำให้เราไม่กล้าตลอดไป ลองปรับลองเปลี่ยนแล้วค่อยๆเริ่มทำเพราะทัศนคติเป็นสิ่งสำคัญ</p>
+          <p>ในการเริ่มเข้าสังคมมากที่สุดเลยนะ !</p>
+          <p>3. ให้ความสำคัญกับคนตรงหน้าละสายตาจากหน้าจอโทรศัพท์ให้มาก เพราะการที่เรามีส่วน</p>
+          <p>ร่วมกับสิ่งตรงหน้าจะทำให้เราได้รู้และเข้า สังคมได้ง่ายขึ้น</p>
+          <p>4. "ลองเป็นฝ่ายเริ่มบทสนทนาก่อน" การที่เราเริ่มพูดคุยขึ้นก่อนชวนคุยก่อนจะเป็นการสร้าง</p>
+          <p>บรรยากาศโดยรวมให้ดีขึ้นไม่รู้สึกถึงความเงียบแล้วทำให้เราอึดอัดอีก</p>
+          <p>5. ลองใช้ชีวิตในแบบที่แปลกใหม่ให้แตกต่างจากที่เราเคยเป็นอยู่เพราะจะทำให้การเข้าสังคม</p>
+          <p>ของเราเป็นเรื่องที่ง่ายมากขึ้นเลยมันทำให้เรากล้าที่จะลองทำ หรือกล้าที่จะลองคุยกับคนใหม่ๆ !</p>
+          <p>สุดท้ายแล้ว ..เราขอเป็นกำลังใจให้ทุกคนเพราะเราก็เป็นหนึ่งในคนที่โลกส่วนตัวสูงไม่ค่อยกล้าที่จะ</p>
+          <p>เข้าสังคมใหม่ๆเท่าไหร่เราจะประหม่าและกังวลเวลาต้องเริ่มเข้าไปในสังคมใหม่ๆอยู่เสมอเลยนะคะ :)</p>
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="love_text-container">
+            <button type="button" onclick="like()">
+              <img src="/images/heart.png" id="counter" />
+              <span id="currentLikes"></span>
+            </button>
+            <br />
+            <img
+              src="/images/comment.png"
+              alt="heart.png"
+              width="50"
+              height="45"
+            />
+          </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/like.js"></script>
+        <script src="ContentPage.js"></script>
+      </body>
+      <script>
+        function like() {
+          // เพิ่มจำนวนไลค์
+          let currentLikes = parseInt(localStorage.getItem("likes")) || 0;
+          currentLikes++;
+          document.getElementById("counter").textContent = currentLikes;
+          document.getElementById("currentLikes").textContent = currentLikes;
+    
+          // บันทึกจำนวนไลค์ลงใน Local Storage
+          localStorage.setItem("likes", currentLikes.toString());
+        }
+      </script>
+    </html>
+

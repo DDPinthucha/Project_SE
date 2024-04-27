@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnHuff</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/ContentPage/ContentPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <header>LearnHuff</header>
+      <ul class="nav-list">
+        <li><a href="/homepage.html">Learn Huff คืออะไร</a></li>
+        <li><a href="">|</a></li>
+        <li><a href="/categorypage.html">หมวดหมู่</a></li>
+      </ul>
+    </nav>
+
+<!--search-->
+    <form class="search-bar" action="#" method="GET" onsubmit="return handleSearch()">
+      <input type="text" list="search-suggestions" autocomplete="off" placeholder="ค้นหาความรู้ที่สนใจ!" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+      <datalist id="search-suggestions"></datalist>
+    </form>
+    <script src="/search.js"></script>
+
+  
+      <br>
+    </div>
+    <div class="purple-box">
+      <div class="container">
+        <div class="left-side">
+          <h1>จัดกระเป๋าเดินทางไปต่างประเทศ</h1>
+          <br />
+          <img
+            src="/images/Prepare.jpg"
+            alt="Image"
+            width="200"
+            height="200"
+          />
+        </div>
+        <hr class="divider" />
+        <div class="right-side">
+          <h3>เทคนิคการจัดกระเป๋าไปต่างประเทศ</h3>
+         
+          <p>1. เตรียมเสื้อผ้าในแต่ละวันให้พร้อม ควรลองชุดที่จะใส่ เพื่อเป็นการดูว่าชุดที่เตรียมไปเหมาะ</p>
+          <p>กับสถานที่ที่เราจะไปเที่ยวรึป่าว</p>
+          <p>2. จัดสกินแคร์ที่จำเป็น เลือกใส่ถุงไว้จะได้หาสะดวก และควรมีสกินแคร์ที่ช่วยละอาการแพ้ไป</p>
+          <p>ด้วย เพื่อเราแพ้สภาพอากาศ</p>
+          <p>3. กระเป๋าติดตัว ควรเป็นกระเป๋าที่ไม่เล็กไม่ใหญ่จนเกินไปและต้องใส่ของที่จำเป็นได้ครบ เช่น</p>
+          <p>กระเป๋าสตางค์ กล้อง มือถือ</p>
+          <p>4. ควรไปสนามบินก่อนเวลา 1-2 ชั่วโมงเพื่อเลี่ยงการตกเครื่อง</p>
+          <p>5. ประกันการเดินทาง สิ่งนี้ขาดไม่ได้ ไม่ว่าเราจะไปเที่ยว ต่างประเทศที่ไหนต้องสมัครประกัน</p>
+          <p>การเดินทางไว้เลย เพื่อความอุ่นใจ และเพื่อที่เวลาเกิดเหตุไม่คาดฝันขึ้นเราจะได้ไม่ลำบาก</p>
+          <p>เที่ยวที่ไหนก็อุ่นใจ ในราคาสบายกระเป๋า</p>
+
+          <br />
+          <br />
+          <br />
+        </div>
+        <div class="love_text-container">
+            <button type="button" onclick="like()">
+              <img src="/images/heart.png" id="counter" />
+              <span id="currentLikes"></span>
+            </button>
+            <br />
+            <img
+              src="/images/comment.png"
+              alt="heart.png"
+              width="50"
+              height="45"
+            />
+          </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/like.js"></script>
+        <script src="ContentPage.js"></script>
+      </body>
+      <script>
+        function like() {
+          // เพิ่มจำนวนไลค์
+          let currentLikes = parseInt(localStorage.getItem("likes")) || 0;
+          currentLikes++;
+          document.getElementById("counter").textContent = currentLikes;
+          document.getElementById("currentLikes").textContent = currentLikes;
+    
+          // บันทึกจำนวนไลค์ลงใน Local Storage
+          localStorage.setItem("likes", currentLikes.toString());
+        }
+      </script>
+    </html>
+

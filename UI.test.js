@@ -12,7 +12,7 @@ describe("Search Functionality", function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
       await driver.get(
-        "C:\\Users\\Deede\\panp4n\\ContentPage\\FinanceSection\\Invest.html"
+        "C:\\Users\\Deede\\panp4n\\ContentPage\\Invest_page.html"
       );
       await driver
         .findElement(By.css(".search-bar input[name='search']"))
