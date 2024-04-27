@@ -30,6 +30,41 @@ describe("webdriver", () => {
 
     await driver.findElement(webdriver.By.xpath("/html/body/div/div[1]/div[2]/a/div")).click();
     expect(true);
-
-    });
   });
+
+  test("Click Menu การเรียน", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[1]/div[3]/a/div")).click();
+    expect(true);
+  });
+
+  test("Click Menu การวางแผนและการจัดการเวลา", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[1]/div[4]/a/div")).click();
+    expect(true);
+  });
+
+  test("Click Menu การสื่อสาร", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[2]/div[1]/a/div")).click();
+    expect(true);
+  });
+
+  test("Click Menu สุขภาพ", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[2]/div[2]/a/div")).click();
+    expect(true);
+  });
+
+  test("Click Menu อาหาร", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[2]/div[3]/a/div")).click();
+    expect(true);
+  });
+
+  test("Click Menu อื่นๆ", async () => {
+
+    await driver.findElement(webdriver.By.xpath("/html/body/div/div[2]/div[4]/a/div")).click();
+    expect(true);
+  });
+});
