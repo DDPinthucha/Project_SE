@@ -2,26 +2,26 @@
 function handleSearch() {
     const searchQuery = document.querySelector('.search-bar input[name="search"]').value.trim();
     const topics = [
-        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/FinanceSection/Tax.html" },
-        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/FinanceSection/Invest.html" },
-        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/HealthSection/FirstAid.html" },
-        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/HealthSection/Stress.html" },
-        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/HealthSection/Organ.html" },
-        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/HealthSection/SkinHealth.html" },
-        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/CommunicationSection/WriteEmail.html" },
-        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/CommunicationSection/Vocab.html" },
-        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/CommunicationSection/HowtoSpeak.html" },
-        { query: "มารยาทตามหลักสากล", url: "/ContentPage/SocializingSection/Courtesy.html" },
-        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/SocializingSection/Social.html" },
-        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/FoodSection/Menu.html" },
-        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/FoodSection/Nutrient.html" },
-        { query: "กราฟคืออะไร", url: "/ContentPage/LearningSection/Graph.html" },
-        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/LearningSection/Garde4.html" },
-        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/ManageSection/ManageTime.html" },
-        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/ManageSection/Plan.html" },
-        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/OtherSection/Law.html" },
-        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/OtherSection/EarthQuake.html" },
-        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/OtherSection/Prepare.html" }
+        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "กราฟคืออะไร", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Format_ContentPage.html" },
+        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Format_ContentPage.html" }
 
     ];
 

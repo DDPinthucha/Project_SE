@@ -75,7 +75,7 @@ var contents = [
         "&nbspR 1. ผลไม้ ผักใบเขียว (มะเขือเทศคือที่สุด) </br>&nbspR 2. ถั่ว เมล็ดอัลมอนต์ถั่วเหลือง </br>&nbspR 3. ชาเขียว (หลีกเลี่ยงกาแฟ หรือเครื่องดื่มที่ใส่นมจากสัตว์)n</br>&nbspR 4. โปรตีนจากไข่ ปลา (แซลม่อนคือดี)",
     },
     {
-      type: "Communicate",
+      type: "Communication",
       detail: "WriteEmail",
       bigHead: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกิด",
       image: "/images/WriteEmail.jpg",
@@ -87,7 +87,7 @@ var contents = [
       bodyForH4: "",
     },
     {
-      type: "Communicate",
+      type: "Communication",
       detail: "Vocab",
       bigHead: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!",
       image: "/images/Vocab.jpg",
@@ -99,7 +99,7 @@ var contents = [
       bodyForH4: "",
     },
     {
-      type: "Communicate",
+      type: "Communication",
       detail: "HowtoSpeak",
       bigHead: "เทคนิคการพูดจาโน้มน้าวใจ",
       image: "/images/HowtoSpeak.jpg",
@@ -261,7 +261,7 @@ var contents = [
       content:["FirstAid","Stress","Organ","SkinHealth"]
     },
     {
-      section:"Communicate",
+      section:"Communication",
       content:["WriteEmail","Vocab","HowtoSpeak"]
     },
     {
