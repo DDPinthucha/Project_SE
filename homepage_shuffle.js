@@ -133,3 +133,8 @@ function shuffleArray(array) {
 
 // Shuffle the cards array
 var shuffledCards= shuffleArray(cards).slice(0,4);
+
+module.exports = {
+    cards: cards,
+    shuffleArray: shuffleArray
+};
