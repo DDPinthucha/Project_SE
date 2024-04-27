@@ -84,7 +84,7 @@ function checkLength(input, min ,max) {
     if(input.value.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
     }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
     }else {
         showSuccess(input);
     }
@@ -107,6 +107,7 @@ const saveMessages = (username,email,password,password_confirm) => {
     })
     .then(() => {
         alert("Account created successfully");
+        window.location.href = "homepage.html";
     })
     .catch((error) => {
         console.error("Error saving data: ", error);
