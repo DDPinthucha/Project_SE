@@ -52,8 +52,47 @@
           <h2>ความรู้แนะนำ</h2>
         </div>
         <div class="cards-container" id="cards"></div>
-    
         
+        <script>
+          // Function to insert shuffled cards into the DOM
+          function insertShuffledCards() {
+              var dynamicCardsContainer = document.getElementById("cards");
+              console.log(shuffledCards)
+              shuffledCards.forEach(function (card) {
+                  var cardDiv = document.createElement("div");
+                  cardDiv.classList.add("cards");
+      
+                  var cardImage = document.createElement("img");
+                  cardImage.src = card.image;
+      
+                  var cardContentDiv = document.createElement("div");
+                  cardContentDiv.classList.add("cards-content");
+      
+                  var cardTitle = document.createElement("h3");
+                  cardTitle.textContent = card.title;
+      
+                  var cardContent = document.createElement("p");
+                  cardContent.textContent = card.content;
+      
+                  var cardLink = document.createElement("a");
+                  cardLink.href = card.link;
+                  cardLink.classList.add("btn");
+                  cardLink.textContent = "อ่านเพิ่มเติม";
+      
+                  cardContentDiv.appendChild(cardTitle);
+                  cardContentDiv.appendChild(cardContent);
+                  cardContentDiv.appendChild(cardLink);
+      
+                  cardDiv.appendChild(cardImage);
+                  cardDiv.appendChild(cardContentDiv);
+      
+                  dynamicCardsContainer.appendChild(cardDiv);
+              });
+          }
+      
+          // Call the function to insert shuffled cards
+            insertShuffledCards();   
+      </script>
     </head>
   </body>
   
