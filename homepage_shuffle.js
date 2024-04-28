@@ -1,126 +1,232 @@
 
 var cards = [
     {
-        image: "images/graph.jpg",
-        title: "กราฟคืออะไร",
-        content: "กราฟคืออะไรและมีประโยชน์อย่างไร มารู้จักกัน!",
-        link: "ContentPage/GraphSum_page.html",
+        id:1, /*Learning*/
+        type:"Learning",
+        id_sec:"GraphSum",
+        image: "/images/graph.jpg",
+        title: "กราฟคืออะไร ?",
+        content: "มารู้จักกับกราฟกัน! กราฟคืออะไร และมันมีประโยชน์อย่างไรกันนะ ?",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/tax.jpg",
-        title: "การคำนวณภาษี",
+        id:2, /*Finance*/ 
+        type:"Finance",
+        id_sec:"tax",
+        image: "/images/tax.jpg",
+        title: "การคำนวณภาษีเบื้องต้น",
         content: "การคำนวนภาษีไม่ยากอย่างที่คิด! มาดูวิธีคำนวนกันเถอะ",
-        link: "ContentPage/TaxCalculation_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/FirstAid.jpg",
+        id:3, /*Healthy*/
+        type:"Healthy",
+        id_sec:"FirstAid",
+        image: "/images/FirstAid.jpg",
         title: "การปฐมพยาบาลเบื้องต้น",
         content: "ข้อเท้าพลิกควรทำยังไงดีนะ วันนี้เรามีคำตอบค่าาา",
-        link: "ContentPage/FirstAid_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Earthquake.jpg",
+        id:4, /*Other*/
+        type:"Other",
+        id_sec:"Earthquake",
+        image: "/images/Earthquake.jpg",
         title: "วิธีเอาตัวรอดจากแผ่นดินไหว",
         content: "แผ่นดินไหวอาจเป็นเรื่องไกลตัวสำหรับหลายคน แต่รู้ไว้ไม่เสียหายแถมยังสามารถช่วยเอาตัวรอดได้อีกด้วย!",
-        link: "ContentPage/Earthquake_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/inves.jpg",
+        id:5, /*Finance*/ 
+        type:"Finance",
+        id_sec:"invest",
+        image: "/images/inves.jpg",
         title: "มือใหม่เริ่มลงทุน",
-        content: "มือใหม่! เริ่มอ่าน! Fund Fact Sheet อย่างไรดี",
-        link: "ContentPage/Inves_page.html",
+        content: "อ่าน Fund Fact Sheet ก่อนเริ่มลงทุน เรื่องง่ายๆ ที่มือใหม่ก็ทำได้",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Stress.jpg",
+        id:6, /*Healthy*/
+        type:"Healthy",
+        id_sec:"Stress",
+        image: "/images/Stress.jpg",
         title: "วิธีจัดการความเครียด",
-        content: "มัดรวม! 5 วิธีจัดการความเครียดแบบง่ายๆ",
-        link: "ContentPage/Stress_page.html",
+        content: "มัดรวม! 5 วิธีเด็ดจัดการความเครียดให้อยู่หมัด ตามแบบฉบับนักจิตวิทยา",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Organ.jpg",
+        id:7, /*Healthy*/
+        type:"Healthy",
+        id_sec:"Organ",
+        image: "/images/Organ.jpg",
         title: "8 อวัยวะเหล่านี้ กลัวอะไร?",
-        content: "อวัยวะในร่างกายของเราก็มีสิ่งที่กลัวเหมือนกันนะ แต่ว่าจะมีอะไรบ้างล่ะ?",
-        link: "ContentPage/Organ_page.html",
+        content: "อวัยวะในร่างกายของเราก็มีสิ่งที่กลัวเหมือนกันนะ แต่ว่าจะมีอะไรบ้างล่ะ? แล้วรีบดูแลให้ดีเลย",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/SkinHealth.jpg",
+        id:8, /*Healthy*/
+        type:"Healthy",
+        id_sec:"SkinHealth",
+        image: "/images/SkinHealth.jpg",
         title: "สุขภาพผิวดี ทำง๊ายง่าย ด้วยตัวเอง!",
-        content: "สาว ๆ หนุ่ม ๆ มาดูแลสุขภาพผิวกันเถอะ!",
-        link: "ContentPage/SkinHealth_page.html",
+        content: "สาว ๆ หนุ่ม ๆ มาดูแลสุขภาพผิวกันเถอะ! เพื่อผิวสุขภาพดีและเปล่งปลั่ง ",
+        link: "../ContentPage/Format_ContentPage.html",
     },
-    {
-        image: "images/WriteEmail.jpg",
+    {   
+        id:9, /* Commucation*/
+        type:"Communication",
+        id_sec:"WriteEmail",
+        image: "/images/WriteEmail.jpg",
         title: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ",
-        content: "มัดรวม ประโยคภาษาอังกฤษปัง ๆ สำหรับการเขียนอีเมล",
-        link: "ContentPage/WriteEmail_page.html",
+        content: "มัดรวม ประโยคภาษาอังกฤษปัง ๆ สำหรับการเขียนอีเมลภาษาอังกฤษอย่างมืออาชีพ",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Vocab.jpg",
+        id:10, /* Communication*/
+        type:"Communication",
+        id_sec:"Vocab",
+        image: "/images/Vocab.jpg",
         title: "สำนวนภาษาอังกฤษน่ารู้ได้ใช้บ่อยแน่นอน!",
-        content: "จดเลย! 8 สำนวนภาษาอังกฤษในชีวิตประจำ",
-        link: "ContentPage/Vocab_page.html",
+        content: "จดเลย! 8 สำนวนภาษาอังกฤษที่ใช้ในชีวิตประจำวัน สำนวนดี ความหมายโดน พร้อมคำแปล ใช้ได้ทั้งเรียนและทำงาน",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/HowtoSpeak.jpg",
+        id:11,/* Communication*/
+        type:"Communication",
+        id_sec:"HowtoSpeak",
+        image: "/images/HowtoSpeak.jpg",
         title: "เทคนิคการพูดจาโน้มน้าวใจ",
         content: "รู้หรือไม่! การพูดจาโน้มน้าวเป็นจิตวิทยาในการทำให้ผู้ฟังรู้สึกคล้อยตามเรา จะมีอะไรบ้างนะ!?",
-        link: "ContentPage/HowtoSpeak_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Courtesy.jpg",
+        id:12,/*Socializing*/ 
+        type:"Socializing",
+        id_sec:"Courtesy",
+        image: "/images/Courtesy.jpg",
         title: "มารยาทตามหลักสากล",
-        content: "รีบดูเลย1? 13 มารยาทในสังคม ที่เราควรมี",
-        link: "ContentPage/Courtesy_page.html",
+        content: "รีบดูเลย ! 13 มารยาทในสังคมพื้นฐาน ที่เราควรมี จะมีอะไรบ้างน๊า? แล้วเรามีครบทุกข้อหรือเปล่า??",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Social.jpg",
-        title: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม",
-        content: "ชาวอินโทรเวิร์ตฟังทางนี้ วิธีเข้าสังคมฉบับ คนโลกส่วนตัวสูงชอบอยู่คนเดียว!",
-        link: "ContentPage/Social_page.html",
+        id:13, /*Socializing*/ 
+        type:"Socializing",
+        id_sec:"Social",
+        image: "/images/Social.jpg",
+        title: "วิธีสร้างความมั่นใจ ให้คนขี้อายกล้าเข้าสังคม",
+        content: "ชาว introvert มาทางนี้เล๊ย วิธีเข้าสังคมฉบับ 'คนโลกส่วนตัวสูงชอบอยู่คนเดียว !'",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Menu.jpg",
+        id:14, /*Food*/ 
+        type:"Food",
+        id_sec:"Menu",
+        image: "/images/Menu.jpg",
         title: "7 เมนูมื้อเย็น ช่วงลดน้ำหนัก",
-        content: "7 วัน 7 เมนูมื้อเย็น อร่อยไม่ซ้ำ",
-        link: "ContentPage/Menu_page.html",
+        content: "แนะนำอาหารเย็นไม่อ้วน 7 เมนูไขมันต่ำ ช่วยควบคุมน้ำหนัก ลดพุงได้ 7 วัน 7 เมนูมื้อเย็น",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Nutrient.jpg",
+        id:15, /*Food*/ 
+        type:"Food",
+        id_sec:"Nutrient",
+        image: "/images/Nutrient.jpg",
         title: "สารอาหารที่จำเป็นต่อร่างกาย",
-        content: "อาหาร 9 ชนิดที่ควรกินทุกวัน!",
-        link: "ContentPage/Nutrient_page.html",
+        content: "สารอาหาร 9 ชนิด ที่ร่างกายควรได้รับต่อวัน มีอะไรบ้าง",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Grade4.jpg",
+        id:16, /*Learning*/
+        type:"Learning",
+        id_sec:"Grade4",
+        image: "/images/Grade4.jpg",
         title: "เรียนอย่างไรให้ได้เกรด 4.00",
-        content: "เทคนิคลับที่อาจารย์ไม่รู้! เรียนอย่างไรให้ได้เกรด 4.00 ฉบับเด็กขี้เกียจ",
-        link: "ContentPage/Grade4_page.html",
+        content: "เทคนิคลับที่อาจารย์ไม่รู้! เรียนอย่างไรให้ได้เกรด 4.00 ฉบับเด็กขี้เกียจ มาดูกัน !!",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/ManageTime.jpg",
+        id:17, /*Manage*/
+        type:"Manage",
+        id_sec:"ManageTime",
+        image: "/images/ManageTime.jpg",
         title: "เคล็ดลับการบริหารเวลา",
-        content: "How to จัดการชีวิตช่วงที่งานท่วมหัวเต็มไปหมดดดด",
-        link: "ContentPage/ManageTime_page.html",
+        content: "How to จัดการชีวิตให้ง่ายขึ้นด้วยวิธีบริหารเวลาอย่างมีประสิทธิภาพ !!",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Plan.jpg",
+        id:18, /*Manage*/
+        type:"Manage",
+        id_sec:"Plan",
+        image: "/images/Plan.jpg",
         title: "เทคนิควางแผนการเที่ยว",
-        content: "แชร์วิธีวางแผนการเที่ยวง่าย ๆ เดินทางสะสวกแน่นอน!",
-        link: "ContentPage/Plan_page.html",
+        content: "แชร์เทคนิควางแผนเที่ยวให้สนุก ไม่วุ่นวาย เดินทางอย่างไรไม่มีสะดุดแน่นอน!!",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Law.jpg",
+        id:19, /*Other*/
+        type:"Other",
+        id_sec:"Law",
+        image: "/images/Law.jpg",
         title: "กฎหมายเบื้องต้น",
         content: "กฎหมายที่ควรรู้ในชีวิตประจำวัน รู้ไว้จะได้ไม่โดนเอาเปรียบ!",
-        link: "ContentPage/Law_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
-        image: "images/Prepare.jpg",
+        id:20, /*Other*/
+        type:"Other",
+        id_sec:"Prepare",
+        image: "/images/Prepare.jpg",
         title: "จัดกระเป๋าเดินทางไปต่างประเทศอย่างไรดีนะ?",
-        content: "เทคนิคการจัดกระเป่าไปต่างประเทศฉบับคนไม่เคยไป ",
-        link: "ContentPage/Prepare_page.html",
+        content: "เทคนิคการจัดกระเป่าไปต่างประเทศฉบับคนไม่เคยไป ฉบับมือโปร ",
+        link: "../ContentPage/Format_ContentPage.html",
+    },
+
+];
+
+let allSection = [
+    {
+        section:"Socializing",
+        head:"การเข้าสังคม",
+        allcontent:["Courtesy","Social"]
+    },
+    {
+        section:"Finance",
+        head:"การเงินเเละการลงทุน",
+        allcontent:["tax","invest"]
+    },
+    {
+        section:"Learning",
+        head:"การเรียน",
+        allcontent:["GraphSum","Grade4"]
+    },
+    {
+        section:"Manage",
+        head:"การวางแผนและการจัดการเวลา",
+        allcontent:["ManageTime","Plan"]
+    },
+    {
+        section:"Communication",
+        head:"การสื่อสาร",
+        allcontent:["WriteEmail","Vocab","HowtoSpeak"]
+    },
+    {
+        section:"Healthy",
+        head:"สุขภาพ",
+        allcontent:["FirstAid","Stress","Organ","SkinHealth"]
+    },
+    {
+        section:"Food",
+        head:"อาหาร",
+        allcontent:["Menu","Nutrient"]
+        
+    },
+    {
+        section:"Other",
+        head:"อื่นๆ",
+        allcontent:["Law","Earthquake","Prepare"]
     },
 ]
+
 
 // Function to shuffle the array randomly
 function shuffleArray(array) {
@@ -135,28 +241,63 @@ function shuffleArray(array) {
 var shuffledCards= shuffleArray(cards).slice(0,4);
 
 
-window.onload = function(){
+window.onload = function() {
     const section = localStorage.getItem('section');
-    show(section, () =>{
-        const links_content = document.querySelectorAll('.btn')
-         
-        for (let i = 0; i < allSection.length; i++) {
-            const contents = allSection[i];
-            if(section === contents.section){
-                for (let j = 0; j < contents.allcontent.length; j++) {
-                    const detail = contents.allcontent[j];
-                    const linkCon = links_content[j];
-                    console.log(detail)
-                    console.log(linkCon)
-                    linkCon.addEventListener("click",function(){
-                        localStorage.setItem('detail',detail)
-                });
-                    
-                }
-            }
-        
-        }
-
+    show(section, () => {
+        const links_content = document.querySelectorAll('.btn');
+        links_content.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                console.log("Selected Section ID:", this.id);
+                localStorage.setItem('detail', this.id);
+                window.location.href = this.href;
+            });
         });
+    });
 };
 
+
+
+function show(section,callback) {
+    let showCard = document.getElementById("cards");
+    showCard.innerHTML = ""; // เคลียร์เนื้อหาเก่า
+    
+    const allCards = [];
+    cards.forEach(card => {
+        allCards.push(card);
+    });
+    
+    // สุ่มการ์ดทุกรอบ
+    const shuffledCards = shuffleArray(allCards);
+    // เลือกแค่ 4 ใบ
+    const selectedCards = shuffledCards.slice(0, 4);
+    selectedCards.forEach(card => {
+            showCard.innerHTML += 
+            `<div class="cards">
+                <img src="${card.image}">
+                <div class="cards-content">
+                    <h3>${card.title}</h3>
+                    <p>${card.content}</p>
+                    <a href="${card.link}" class="btn" id="${card.id_sec}">อ่านเพิ่มเติม</a>
+                </div>
+            </div>`;
+        
+       
+    });
+
+    if (callback) callback();
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[j], array[i]] = [array[i], array[j]];
+    }
+    return array;
+}
+
+
+module.exports = {
+    cards: cards,
+    shuffleArray: shuffleArray
+};

@@ -3,11 +3,11 @@ var cards = [
     {
         id:1, /*Learning*/
         type:"Learning",
-        id_sec:"graph",
+        id_sec:"GraphSum",
         image: "/images/graph.jpg",
         title: "กราฟคืออะไร ?",
         contents: "มารู้จักกับกราฟกัน! กราฟคืออะไร และมันมีประโยชน์อย่างไรกันนะ ?",
-        link: "../ContentPage/GraphSum_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:2, /*Finance*/ 
@@ -16,7 +16,7 @@ var cards = [
         image: "/images/tax.jpg",
         title: "การคำนวณภาษีเบื้องต้น",
         contents: "การคำนวนภาษีไม่ยากอย่างที่คิด! มาดูวิธีคำนวนกันเถอะ",
-        link: "../ContentPage/tax_calculation_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:3, /*Healthy*/
@@ -25,7 +25,7 @@ var cards = [
         image: "/images/FirstAid.jpg",
         title: "การปฐมพยาบาลเบื้องต้น",
         contents: "ข้อเท้าพลิกควรทำยังไงดีนะ วันนี้เรามีคำตอบค่าาา",
-        link: "../ContentPage/FirstAid_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:4, /*Other*/
@@ -34,7 +34,7 @@ var cards = [
         image: "/images/Earthquake.jpg",
         title: "วิธีเอาตัวรอดจากแผ่นดินไหว",
         contents: "แผ่นดินไหวอาจเป็นเรื่องไกลตัวสำหรับหลายคน แต่รู้ไว้ไม่เสียหายแถมยังสามารถช่วยเอาตัวรอดได้อีกด้วย!",
-        link: "../ContentPage/Earthquake_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:5, /*Finance*/ 
@@ -43,7 +43,7 @@ var cards = [
         image: "/images/inves.jpg",
         title: "มือใหม่เริ่มลงทุน",
         contents: "อ่าน Fund Fact Sheet ก่อนเริ่มลงทุน เรื่องง่ายๆ ที่มือใหม่ก็ทำได้",
-        link: "../ContentPage/Invest_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:6, /*Healthy*/
@@ -52,7 +52,7 @@ var cards = [
         image: "/images/Stress.jpg",
         title: "วิธีจัดการความเครียด",
         contents: "มัดรวม! 5 วิธีเด็ดจัดการความเครียดให้อยู่หมัด ตามแบบฉบับนักจิตวิทยา",
-        link: "../ContentPage/Stress_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:7, /*Healthy*/
@@ -61,7 +61,7 @@ var cards = [
         image: "/images/Organ.jpg",
         title: "8 อวัยวะเหล่านี้ กลัวอะไร?",
         contents: "อวัยวะในร่างกายของเราก็มีสิ่งที่กลัวเหมือนกันนะ แต่ว่าจะมีอะไรบ้างล่ะ? แล้วรีบดูแลให้ดีเลย",
-        link: "../ContentPage/Organ_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:8, /*Healthy*/
@@ -70,7 +70,7 @@ var cards = [
         image: "/images/SkinHealth.jpg",
         title: "สุขภาพผิวดี ทำง๊ายง่าย ด้วยตัวเอง!",
         contents: "สาว ๆ หนุ่ม ๆ มาดูแลสุขภาพผิวกันเถอะ! เพื่อผิวสุขภาพดีและเปล่งปลั่ง ",
-        link: "../ContentPage/SkinHealth_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {   
         id:9, /* Commucation*/
@@ -79,7 +79,7 @@ var cards = [
         image: "/images/WriteEmail.jpg",
         title: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ",
         contents: "มัดรวม ประโยคภาษาอังกฤษปัง ๆ สำหรับการเขียนอีเมลภาษาอังกฤษอย่างมืออาชีพ",
-        link: "../ContentPage/WriteEmail_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:10, /* Communication*/
@@ -88,7 +88,7 @@ var cards = [
         image: "/images/Vocab.jpg",
         title: "สำนวนภาษาอังกฤษน่ารู้ได้ใช้บ่อยแน่นอน!",
         contents: "จดเลย! 8 สำนวนภาษาอังกฤษที่ใช้ในชีวิตประจำวัน สำนวนดี ความหมายโดน พร้อมคำแปล ใช้ได้ทั้งเรียนและทำงาน",
-        link: "../ContentPage/Vocab_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:11,/* Communication*/
@@ -97,7 +97,7 @@ var cards = [
         image: "/images/HowtoSpeak.jpg",
         title: "เทคนิคการพูดจาโน้มน้าวใจ",
         contents: "รู้หรือไม่! การพูดจาโน้มน้าวเป็นจิตวิทยาในการทำให้ผู้ฟังรู้สึกคล้อยตามเรา จะมีอะไรบ้างนะ!?",
-        link: "../ContentPage/HowToSpeak_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:12,/*Socializing*/ 
@@ -106,7 +106,7 @@ var cards = [
         image: "/images/Courtesy.jpg",
         title: "มารยาทตามหลักสากล",
         contents: "รีบดูเลย ! 13 มารยาทในสังคมพื้นฐาน ที่เราควรมี จะมีอะไรบ้างน๊า? แล้วเรามีครบทุกข้อหรือเปล่า??",
-        link: "../ContentPage/Courtesy_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:13, /*Socializing*/ 
@@ -115,7 +115,7 @@ var cards = [
         image: "/images/Social.jpg",
         title: "วิธีสร้างความมั่นใจ ให้คนขี้อายกล้าเข้าสังคม",
         contents: "ชาว introvert มาทางนี้เล๊ย วิธีเข้าสังคมฉบับ 'คนโลกส่วนตัวสูงชอบอยู่คนเดียว !'",
-        link: "../ContentPage/Social_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:14, /*Food*/ 
@@ -124,7 +124,7 @@ var cards = [
         image: "/images/Menu.jpg",
         title: "7 เมนูมื้อเย็น ช่วงลดน้ำหนัก",
         contents: "แนะนำอาหารเย็นไม่อ้วน 7 เมนูไขมันต่ำ ช่วยควบคุมน้ำหนัก ลดพุงได้ 7 วัน 7 เมนูมื้อเย็น",
-        link: "../ContentPage/Menu_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:15, /*Food*/ 
@@ -133,7 +133,7 @@ var cards = [
         image: "/images/Nutrient.jpg",
         title: "สารอาหารที่จำเป็นต่อร่างกาย",
         contents: "สารอาหาร 9 ชนิด ที่ร่างกายควรได้รับต่อวัน มีอะไรบ้าง",
-        link: "../ContentPage/Nutrient_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:16, /*Learning*/
@@ -142,7 +142,7 @@ var cards = [
         image: "/images/Grade4.jpg",
         title: "เรียนอย่างไรให้ได้เกรด 4.00",
         contents: "เทคนิคลับที่อาจารย์ไม่รู้! เรียนอย่างไรให้ได้เกรด 4.00 ฉบับเด็กขี้เกียจ มาดูกัน !!",
-        link: "../ContentPage/Grade4_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:17, /*Manage*/
@@ -151,7 +151,7 @@ var cards = [
         image: "/images/ManageTime.jpg",
         title: "เคล็ดลับการบริหารเวลา",
         contents: "How to จัดการชีวิตให้ง่ายขึ้นด้วยวิธีบริหารเวลาอย่างมีประสิทธิภาพ !!",
-        link: "../ContentPage/ManageTime_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:18, /*Manage*/
@@ -160,7 +160,7 @@ var cards = [
         image: "/images/Plan.jpg",
         title: "เทคนิควางแผนการเที่ยว",
         contents: "แชร์เทคนิควางแผนเที่ยวให้สนุก ไม่วุ่นวาย เดินทางอย่างไรไม่มีสะดุดแน่นอน!!",
-        link: "../ContentPage/Plan_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:19, /*Other*/
@@ -169,7 +169,7 @@ var cards = [
         image: "/images/Law.jpg",
         title: "กฎหมายเบื้องต้น",
         contents: "กฎหมายที่ควรรู้ในชีวิตประจำวัน รู้ไว้จะได้ไม่โดนเอาเปรียบ!",
-        link: "../ContentPage/Law_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
     {
         id:20, /*Other*/
@@ -178,7 +178,7 @@ var cards = [
         image: "/images/Prepare.jpg",
         title: "จัดกระเป๋าเดินทางไปต่างประเทศอย่างไรดีนะ?",
         content: "เทคนิคการจัดกระเป่าไปต่างประเทศฉบับคนไม่เคยไป ฉบับมือโปร ",
-        link: "../ContentPage/Prepare_page.html",
+        link: "../ContentPage/Format_ContentPage.html",
     },
 
 ];

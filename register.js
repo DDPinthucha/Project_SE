@@ -120,10 +120,10 @@ function submitForm(e){
     e.preventDefault();
     isSuccess = true;
 
-    var username = getElementVal("username");
-    var email =  getElementVal("email");
-    var password = getElementVal("password");
-    var password_confirm = getElementVal("password_confirm");
+    var username = getElementVal("username").value;
+    var email =  getElementVal("email").value;
+    var password = getElementVal("password").value;
+    var password_confirm = getElementVal("password_confirm").value;
 
     console.log("Username:", username);
     console.log("Email:", email);
