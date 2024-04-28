@@ -44,11 +44,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">59.01</p>
+      <p class="stat">52.15</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
-      <p class="stat">72</p>
+      <p class="stat">74</p>
     </div>
   </div>
   <div class="row historical">
@@ -62,11 +62,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">13.09</p>
+      <p class="stat">14.37</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
-      <p class="stat">0.56</p>
+      <p class="stat">0.92</p>
     </div>
   </div>
 </div>
@@ -92,31 +92,33 @@
     <textarea id="file-source" class="col-md-12">function handleSearch() {
     const searchQuery = document.querySelector(&#039;.search-bar input[name=&quot;search&quot;]&#039;).value.trim();
     const topics = [
-        { query: &quot;วิธีการคำนวณภาษีเบื้องต้น&quot;, url: &quot;/ContentPage/FinanceSection/Tax.html&quot; },
-        { query: &quot;มือใหม่เริ่มลงทุน&quot;, url: &quot;/ContentPage/FinanceSection/Invest.html&quot; },
-        { query: &quot;การปฐมพยาบาลเบื้องต้น&quot;, url: &quot;/ContentPage/HealthSection/FirstAid.html&quot; },
-        { query: &quot;วิธีการจัดการความเครียด&quot;, url: &quot;/ContentPage/HealthSection/Stress.html&quot; },
-        { query: &quot;อวัยวะเหล่านี้กลัวอะไร?&quot;, url: &quot;/ContentPage/HealthSection/Organ.html&quot; },
-        { query: &quot;สุขภาพผิวดี ทำง่ายๆ&quot;, url: &quot;/ContentPage/HealthSection/SkinHealth.html&quot; },
-        { query: &quot;ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ&quot;, url: &quot;/ContentPage/CommunicationSection/WriteEmail.html&quot; },
-        { query: &quot;สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!&quot;, url: &quot;/ContentPage/CommunicationSection/Vocab.html&quot; },
-        { query: &quot;เทคนิคการพูดโน้มน้าวใจ&quot;, url: &quot;/ContentPage/CommunicationSection/HowtoSpeak.html&quot; },
-        { query: &quot;มารยาทตามหลักสากล&quot;, url: &quot;/ContentPage/SocializingSection/Courtesy.html&quot; },
-        { query: &quot;วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม&quot;, url: &quot;/ContentPage/SocializingSection/Social.html&quot; },
-        { query: &quot;เมนูมื้อเย็น ช่วงลดน้ำหนัก&quot;, url: &quot;/ContentPage/FoodSection/Menu.html&quot; },
-        { query: &quot;สารอาหารที่จำเป็นต่อร่างกาย&quot;, url: &quot;/ContentPage/FoodSection/Nutrient.html&quot; },
-        { query: &quot;กราฟคืออะไร&quot;, url: &quot;/ContentPage/LearningSection/Graph.html&quot; },
-        { query: &quot;เรียนยังไง ให้ได้ 4.00&quot;, url: &quot;/ContentPage/LearningSection/Garde4.html&quot; },
-        { query: &quot;เคล็ดลับการบริหารเวลา&quot;, url: &quot;/ContentPage/ManageSection/ManageTime.html&quot; },
-        { query: &quot;แชร์วิธีทำแพลนเที่ยว&quot;, url: &quot;/ContentPage/ManageSection/Plan.html&quot; },
-        { query: &quot;กฎหมายเบื้องต้น&quot;, url: &quot;/ContentPage/OtherSection/Law.html&quot; },
-        { query: &quot;วิธีเอาตัวรอดจากแผ่นดินไหว&quot;, url: &quot;/ContentPage/OtherSection/EarthQuake.html&quot; },
-        { query: &quot;จัดกระเป๋าเดินทางไปต่างประเทศ&quot;, url: &quot;/ContentPage/OtherSection/Prepare.html&quot; }
+        { query: &quot;วิธีการคำนวณภาษีเบื้องต้น&quot;, url: &quot;/ContentPage/TaxCalculation_page.html&quot;,section:&quot;Finance&quot;,detail:&quot;tax&quot;},
+        { query: &quot;มือใหม่เริ่มลงทุน&quot;, url: &quot;/ContentPage/Invest_page.html&quot;,section:&quot;Finance&quot;,detail:&quot;invest&quot; },
+        { query: &quot;การปฐมพยาบาลเบื้องต้น&quot;, url: &quot;/ContentPage/FirstAid_page.html&quot;,section:&quot;Healthy&quot;,detail:&quot;FirstAid&quot; },
+        { query: &quot;วิธีการจัดการความเครียด&quot;, url: &quot;/ContentPage/Stress_page.html&quot;,section:&quot;Healthy&quot;,detail:&quot;Stress&quot; },
+        { query: &quot;อวัยวะเหล่านี้กลัวอะไร?&quot;, url: &quot;/ContentPage/Organ_page.html&quot;,section:&quot;Healthy&quot;,detail:&quot;Organ&quot; },
+        { query: &quot;สุขภาพผิวดี ทำง่ายๆ&quot;, url: &quot;/ContentPage/SkinHealth_page.html&quot;,section:&quot;Healthy&quot;,detail:&quot;SkinHealth&quot; },
+        { query: &quot;ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ&quot;, url: &quot;/ContentPage/WriteEmail_page.html&quot;,section:&quot;Communication&quot;,detail:&quot;WriteEmail&quot; },
+        { query: &quot;สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!&quot;, url: &quot;/ContentPage/Vocab_page.html&quot;,section:&quot;Communication&quot;,detail:&quot;Vocab&quot; },
+        { query: &quot;เทคนิคการพูดโน้มน้าวใจ&quot;, url: &quot;/ContentPage/HowToSpeak_page.html&quot;,section:&quot;Communication&quot;,detail:&quot;HowtoSpeak&quot; },
+        { query: &quot;มารยาทตามหลักสากล&quot;, url: &quot;/ContentPage/Courtesy_page.html&quot;,section:&quot;Socializing&quot;,detail:&quot;Courtesy&quot; },
+        { query: &quot;วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม&quot;, url: &quot;/ContentPage/Social_page.html&quot;,section:&quot;Socializing&quot;,detail:&quot;Social&quot; },
+        { query: &quot;เมนูมื้อเย็น ช่วงลดน้ำหนัก&quot;, url: &quot;/ContentPage/Menu_page.html&quot;,section:&quot;Food&quot;,detail:&quot;Menu&quot; },
+        { query: &quot;สารอาหารที่จำเป็นต่อร่างกาย&quot;, url: &quot;/ContentPage/Nutrient_page.html&quot;,section:&quot;Food&quot;,detail:&quot;Nutrient&quot; },
+        { query: &quot;กราฟคืออะไร&quot;, url: &quot;/ContentPage/GraphSum_page.html&quot;,section:&quot;Learning&quot;,detail:&quot;GraphSum&quot; },
+        { query: &quot;เรียนยังไง ให้ได้ 4.00&quot;, url: &quot;/ContentPage/Grade4_page.html&quot;,section:&quot;Learning&quot;,detail:&quot;Grade4&quot; },
+        { query: &quot;เคล็ดลับการบริหารเวลา&quot;, url: &quot;/ContentPage/ManageTime_page.html&quot;,section:&quot;Manage&quot;,detail:&quot;ManageTime&quot;},
+        { query: &quot;แชร์วิธีทำแพลนเที่ยว&quot;, url: &quot;/ContentPage/Plan_page.html&quot;,section:&quot;Manage&quot;,detail:&quot;Plan&quot;},
+        { query: &quot;กฎหมายเบื้องต้น&quot;, url: &quot;/ContentPage/Law_page.html&quot;,section:&quot;Other&quot;,detail:&quot;Law&quot;},
+        { query: &quot;วิธีเอาตัวรอดจากแผ่นดินไหว&quot;, url: &quot;/ContentPage/Earthquake_page.html&quot;,section:&quot;Other&quot;,detail:&quot;Earthquake&quot; },
+        { query: &quot;จัดกระเป๋าเดินทางไปต่างประเทศ&quot;, url: &quot;/ContentPage/Prepare_page.html&quot;,section:&quot;Other&quot;,detail:&quot;Prepare&quot; }
 
     ];
 
     const topic = topics.find(topic =&gt; topic.query === searchQuery);
     if (topic) {
+        localStorage.setItem(&#039;section&#039;, topic.section);
+        localStorage.setItem(&#039;detail&#039;, topic.detail);
         window.location.href = topic.url;
         return false; // ป้องกันฟอร์มส่งค่าไปที่ URL ที่ระบุในแอททริบิวต์ action
     } else {

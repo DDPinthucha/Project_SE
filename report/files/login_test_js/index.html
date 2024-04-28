@@ -102,7 +102,7 @@ describe(&quot;Perform Search&quot;, function () {
   it(&quot;Check if you can login to the home page&quot;, async function () {
     let driver = await new Builder().forBrowser(&quot;chrome&quot;).build();
     try {
-      await driver.get(&quot;D:\\home\\sirio\\panp4n\\login.html&quot;);
+      await driver.get(&quot;file:///C:/Users/Deede/panp4n/login.html&quot;);
 
       await driver.findElement(By.id(&quot;username&quot;)).sendKeys(&quot;sc651010203&quot;);
       await driver.findElement(By.id(&quot;password&quot;)).sendKeys(&quot;45600&quot;, Key.RETURN);

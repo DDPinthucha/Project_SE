@@ -228,6 +228,18 @@ let allSection = [
 ]
 
 
+// Function to shuffle the array randomly
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array
+}
+
+// Shuffle the cards array
+var shuffledCards= shuffleArray(cards).slice(0,4);
+
 
 window.onload = function() {
     const section = localStorage.getItem('section');
