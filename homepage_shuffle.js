@@ -231,23 +231,29 @@ let allSection = [
 
 window.onload = function(){
     const section = localStorage.getItem('section');
-    
     show(section, () => {
         const links_content = document.querySelectorAll('.btn');
-        for (let j = 0; j < cards.length; j++) {
-            const detail = contents.allcontent[j];
-            const linkCon = links_content[j];
-            console.log(detail);
-            console.log(linkCon);
-            linkCon.addEventListener("click",function(){
-                localStorage.setItem('detail',detail);
-            });   
-            
-            
+        for (let i = 0; i < allSection.length; i++) {
+            const contents = allSection[i];
+            if (section === contents.section) {
+                for (let j = 0; j < contents.allcontent.length; j++) {
+                    const detail = contents.allcontent[j];
+                    const linkCon = links_content[j];
+                    console.log(detail);
+                    console.log(linkCon);
+                    linkCon.addEventListener("click", function(event) {
+                        const clickedLinkId = event.target.id;
+                        if (clickedLinkId === detail) {
+                            console.log(detail);
+                            localStorage.setItem('detail', detail);
+                        }
+                    });
+                }
+            }
         }
-       
     });
 };
+
 
 function show(section,callback) {
     let showCard = document.getElementById("cards");
@@ -292,4 +298,3 @@ module.exports = {
     cards: cards,
     shuffleArray: shuffleArray
 };
-
