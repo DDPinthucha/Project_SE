@@ -107,7 +107,7 @@ const saveMessages = (username,email,password,password_confirm) => {
     })
     .then(() => {
         alert("Account created successfully");
-        window.location.href = "homepage.html";
+        window.location.href = "login.html";
     })
     .catch((error) => {
         console.error("Error saving data: ", error);
