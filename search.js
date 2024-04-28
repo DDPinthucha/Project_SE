@@ -3,7 +3,6 @@ function handleSearch() {
     const searchQuery = document.querySelector('.search-bar input[name="search"]').value.trim();
     const url_format = "/ContentPage/Format_ContentPage.html";
     const topics = [
-<<<<<<< HEAD
         { query: "วิธีการคำนวณภาษีเบื้องต้น", url:url_format ,section:"Finance",detail:"tax"},
         { query: "มือใหม่เริ่มลงทุน", url:url_format,section:"Finance",detail:"invest" },
         { query: "การปฐมพยาบาลเบื้องต้น", url:url_format,section:"Healthy",detail:"FirstAid" },
@@ -24,28 +23,6 @@ function handleSearch() {
         { query: "กฎหมายเบื้องต้น", url:url_format,section:"Other",detail:"Law"},
         { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url:url_format,section:"Other",detail:"Earthquake" },
         { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url:url_format,section:"Other",detail:"Prepare" }
-=======
-        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/TaxCalculation_page.html",section:"Finance",detail:"tax"},
-        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Invest_page.html",section:"Finance",detail:"invest" },
-        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/FirstAid_page.html",section:"Healthy",detail:"FirstAid" },
-        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Stress_page.html",section:"Healthy",detail:"Stress" },
-        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Organ_page.html",section:"Healthy",detail:"Organ" },
-        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/SkinHealth_page.html",section:"Healthy",detail:"SkinHealth" },
-        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/WriteEmail_page.html",section:"Communication",detail:"WriteEmail" },
-        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Vocab_page.html",section:"Communication",detail:"Vocab" },
-        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/HowToSpeak_page.html",section:"Communication",detail:"HowtoSpeak" },
-        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Courtesy_page.html",section:"Socializing",detail:"Courtesy" },
-        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Social_page.html",section:"Socializing",detail:"Social" },
-        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Menu_page.html",section:"Food",detail:"Menu" },
-        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Nutrient_page.html",section:"Food",detail:"Nutrient" },
-        { query: "กราฟคืออะไร", url: "/ContentPage/GraphSum_page.html",section:"Learning",detail:"GraphSum" },
-        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Grade4_page.html",section:"Learning",detail:"Grade4" },
-        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/ManageTime_page.html",section:"Manage",detail:"ManageTime"},
-        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Plan_page.html",section:"Manage",detail:"Plan"},
-        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Law_page.html",section:"Other",detail:"Law"},
-        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Earthquake_page.html",section:"Other",detail:"Earthquake" },
-        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Prepare_page.html",section:"Other",detail:"Prepare" }
->>>>>>> 199acad9ccaaeece119467986a13da844d36c854
 
     ];
 
