@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Plato - register.js</title>
+  <title>Plato - shufflecards.test.js</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
@@ -36,7 +36,7 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>register.js</h1>
+    <h1>shufflecards.test.js</h1>
   </div>
 </div>
 
@@ -44,11 +44,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
-      <p class="stat">72.54</p>
+      <p class="stat">85.68</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
-      <p class="stat">144</p>
+      <p class="stat">14</p>
     </div>
   </div>
   <div class="row historical">
@@ -62,11 +62,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
-      <p class="stat">21.70</p>
+      <p class="stat">5.20</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
-      <p class="stat">1.09</p>
+      <p class="stat">0.07</p>
     </div>
   </div>
 </div>
@@ -89,150 +89,20 @@
 
 <div class="container">
   <div class="row">
-    <textarea id="file-source" class="col-md-12">const firebaseConfig = {
-    apiKey: &quot;AIzaSyBz4T_JWDa69uM36SSofJYQbtPPUn7PvGk&quot;,
-    authDomain: &quot;databaselogin-85385.firebaseapp.com&quot;,
-    databaseURL: &quot;https://databaselogin-85385-default-rtdb.firebaseio.com&quot;,
-    projectId: &quot;databaselogin-85385&quot;,
-    storageBucket: &quot;databaselogin-85385.appspot.com&quot;,
-    messagingSenderId: &quot;924906301928&quot;,
-    appId: &quot;1:924906301928:web:9a3b239798e811dd101c5d&quot;
-};
+    <textarea id="file-source" class="col-md-12">const { shuffleArray, cards } = require(&#039;./homepage_shuffle.js&#039;);
 
-//initialize firebase
-firebase.initializeApp(firebaseConfig);
+describe(&#039;Shuffle Cards Test&#039;, () =&gt; {
+  test(&#039;Cards are shuffled randomly&#039;, () =&gt; {
+    
+    const shuffledCards = shuffleArray(cards);
 
-//refernce your database
-var DatabaseloginDB = firebase.database().ref(&#039;Databaselogin&#039;);
+    expect(shuffledCards.length).toEqual(cards.length);
 
-document.getElementById(&#039;register-form&#039;).addEventListener(&#039;submit&#039;, submitForm);
-
-const getElementVal = (id) =&gt; {
-    return document.getElementById(id);
-}
-
-var form = getElementVal(&quot;register-form&quot;);
-var username = getElementVal(&quot;username&quot;);
-var email =  getElementVal(&quot;email&quot;);
-var password = getElementVal(&quot;password&quot;);
-var password_confirm = getElementVal(&quot;password_confirm&quot;);
-var isSuccess = true;
-
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-//Show input error messages
-function showError(input, message) {
-    isSuccess = false;
-    const formcontrol = input.parentElement;
-      formcontrol.className = &#039;form-control error&#039;;
-      const small = formcontrol.querySelector(&#039;small&#039;);
-      if (small) {
-        small.innerText = message;
-
-      }
-    }
-  
-
-  
-  //show success colour
-  function showSuccess(input) {
-    const formControl = input.parentElement;
-    formControl.className = &#039;form-control success&#039;;
-    const smallError = formControl.querySelector(&#039;small&#039;);
-    if (smallError) {
-      smallError.innerText = &#039;&#039;;
-    }
-  }
-
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input){
-        if(input.value.trim() === &#039;&#039;){
-            showError(input,`${getFieldName(input)} is required`)
-        } else {
-            showSuccess(input);
-        }
+    cards.forEach(card =&gt; {
+      expect(shuffledCards).toContainEqual(card);
     });
-}
-  
-  
-  //check email is valid
-function checkEmail(input) {
-    console.log(&quot;emailorcheck:&quot;, input);
-      const re = /^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(re.test(input.value.trim())) {
-          showSuccess(input)
-      }else {
-          showError(input,&#039;Email is not invalid&#039;);
-      }
-}
-
-function checkLength(input, min ,max) {
-    console.log(&quot;input:&quot;, input);
-    if(input.value.length &lt; min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length &gt; max) {
-        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
-    }else {
-        showSuccess(input);
-    }
-}
-
-function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
-        showError(input2, &#039;Passwords do not match&#039;);
-    }
-}
-
-const saveMessages = (username,email,password,password_confirm) =&gt; {
-    var newDatalogin = DatabaseloginDB.push()
-
-    newDatalogin.set({
-        username: username,
-        email: email,
-        password: password,
-        password_confirm: password_confirm,
-    })
-    .then(() =&gt; {
-        alert(&quot;Account created successfully&quot;);
-        window.location.href = &quot;homepage.html&quot;;
-    })
-    .catch((error) =&gt; {
-        console.error(&quot;Error saving data: &quot;, error);
-    });
-};
-
-
-
-function submitForm(e){
-    e.preventDefault();
-    isSuccess = true;
-
-    var username = getElementVal(&quot;username&quot;);
-    var email =  getElementVal(&quot;email&quot;);
-    var password = getElementVal(&quot;password&quot;);
-    var password_confirm = getElementVal(&quot;password_confirm&quot;);
-
-    console.log(&quot;Username:&quot;, username);
-    console.log(&quot;Email:&quot;, email);
-    console.log(&quot;Password:&quot;, password);
-    console.log(&quot;Confirm Password:&quot;, password_confirm);
-
-    checkRequired([username,email, password, password_confirm]);
-    checkLength(username, 1, 20);
-    checkLength(password, 6, 16);
-    checkLength(password_confirm, 6, 16);
-    checkEmail(email);
-    checkPasswordMatch(password, password_confirm);
-
-    if(isSuccess){
-        saveMessages(username,email,password,password_confirm);
-    }
-}
-
-form.addEventListener(&quot;submit&quot;,submitForm)</textarea>
+  });
+});</textarea>
   </div>
 </div>
 

@@ -18,11 +18,11 @@ describe("Search Functionality", function () {
         .findElement(By.css(".search-bar input[name='search']"))
         .sendKeys("มือใหม่หัดเริ่มลงทุน", Key.RETURN);
       await driver.wait(
-        until.urlContains("/ContentPage/FinanceSection/Invest.html"),
+        until.urlContains("/ContentPage/Invest_page.html"),
         10000
       );
       const currentURL = await driver.getCurrentUrl();
-      expect(currentURL).toContain("/ContentPage/FinanceSection/Invest.html");
+      expect(currentURL).toContain("/ContentPage/Invest_page.html");
     } finally {
       await driver.quit();
     }
@@ -78,6 +78,23 @@ describe("Search Functionality", function () {
         assert(cardsContainer);
         console.log("Page Title:", pageTitle);
         console.log("Cards Container found:", !!cardsContainer);
+      } finally {
+        await driver.quit();
+      }
+    });
+  });
+
+ //HomePage -> CategoryPage
+  describe("Perform Search", function () {
+    it("HomePage -> CategoryPage", async function () {
+      let driver = await new Builder().forBrowser("chrome").build();
+      try {
+        await driver.get("file:///C:/Users/Deede/panp4n/homepage.html");
+        await driver.findElement(By.linkText("หมวดหมู่")).click();
+        await driver.wait(until.titleIs("Category Page"), 10000);
+        let pageTitle = await driver.getTitle();
+        assert.strictEqual(pageTitle, "Category Page");
+        console.log("Page Title:", pageTitle);
       } finally {
         await driver.quit();
       }
