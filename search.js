@@ -2,26 +2,26 @@
 function handleSearch() {
     const searchQuery = document.querySelector('.search-bar input[name="search"]').value.trim();
     const topics = [
-        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Finance",detail:"tax"},
-        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Format_ContentPage.html",section:"Finance",detail:"invest" },
-        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"FirstAid" },
-        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"Stress" },
-        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"Organ" },
-        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/Format_ContentPage.html",section:"Healthy",detail:"SkinHealth" },
-        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"WriteEmail" },
-        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"Vocab" },
-        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/Format_ContentPage.html",section:"Communication",detail:"HowtoSpeak" },
-        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Format_ContentPage.html",section:"Socializing",detail:"Courtesy" },
-        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Format_ContentPage.html",section:"Socializing",detail:"Social" },
-        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Format_ContentPage.html",section:"Food",detail:"Menu" },
-        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Format_ContentPage.html",section:"Food",detail:"Nutrient" },
-        { query: "กราฟคืออะไร", url: "/ContentPage/Format_ContentPage.html",section:"Learning",detail:"GraphSum" },
-        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Format_ContentPage.html",section:"Learning",detail:"Grade4" },
-        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/Format_ContentPage.html",section:"Manage",detail:"ManageTime"},
-        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Format_ContentPage.html",section:"Manage",detail:"Plan"},
-        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Law"},
-        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Earthquake" },
-        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Format_ContentPage.html",section:"Other",detail:"Prepare" }
+        { query: "วิธีการคำนวณภาษีเบื้องต้น", url: "/ContentPage/TaxCalculation_page.html",section:"Finance",detail:"tax"},
+        { query: "มือใหม่เริ่มลงทุน", url: "/ContentPage/Invest_page.html",section:"Finance",detail:"invest" },
+        { query: "การปฐมพยาบาลเบื้องต้น", url: "/ContentPage/FirstAid_page.html",section:"Healthy",detail:"FirstAid" },
+        { query: "วิธีการจัดการความเครียด", url: "/ContentPage/Stress_page.html",section:"Healthy",detail:"Stress" },
+        { query: "อวัยวะเหล่านี้กลัวอะไร?", url: "/ContentPage/Organ_page.html",section:"Healthy",detail:"Organ" },
+        { query: "สุขภาพผิวดี ทำง่ายๆ", url: "/ContentPage/SkinHealth_page.html",section:"Healthy",detail:"SkinHealth" },
+        { query: "ทักษะในการเขียนอีเมลเบื้องต้นในภาษาอังกฤษ", url: "/ContentPage/WriteEmail_page.html",section:"Communication",detail:"WriteEmail" },
+        { query: "สำนวนภาษาอังกฤษน่ารู้ ได้ใช้บ่อยแน่!", url: "/ContentPage/Vocab_page.html",section:"Communication",detail:"Vocab" },
+        { query: "เทคนิคการพูดโน้มน้าวใจ", url: "/ContentPage/HowToSpeak_page.html",section:"Communication",detail:"HowtoSpeak" },
+        { query: "มารยาทตามหลักสากล", url: "/ContentPage/Courtesy_page.html",section:"Socializing",detail:"Courtesy" },
+        { query: "วิธีสร้างความมั่นใจให้คนขี้อายกล้าเข้าสังคม", url: "/ContentPage/Social_page.html",section:"Socializing",detail:"Social" },
+        { query: "เมนูมื้อเย็น ช่วงลดน้ำหนัก", url: "/ContentPage/Menu_page.html",section:"Food",detail:"Menu" },
+        { query: "สารอาหารที่จำเป็นต่อร่างกาย", url: "/ContentPage/Nutrient_page.html",section:"Food",detail:"Nutrient" },
+        { query: "กราฟคืออะไร", url: "/ContentPage/GraphSum_page.html",section:"Learning",detail:"GraphSum" },
+        { query: "เรียนยังไง ให้ได้ 4.00", url: "/ContentPage/Grade4_page.html",section:"Learning",detail:"Grade4" },
+        { query: "เคล็ดลับการบริหารเวลา", url: "/ContentPage/ManageTime_page.html",section:"Manage",detail:"ManageTime"},
+        { query: "แชร์วิธีทำแพลนเที่ยว", url: "/ContentPage/Plan_page.html",section:"Manage",detail:"Plan"},
+        { query: "กฎหมายเบื้องต้น", url: "/ContentPage/Law_page.html",section:"Other",detail:"Law"},
+        { query: "วิธีเอาตัวรอดจากแผ่นดินไหว", url: "/ContentPage/Earthquake_page.html",section:"Other",detail:"Earthquake" },
+        { query: "จัดกระเป๋าเดินทางไปต่างประเทศ", url: "/ContentPage/Prepare_page.html",section:"Other",detail:"Prepare" }
 
     ];
 
