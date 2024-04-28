@@ -13,7 +13,7 @@ describe("webdriver", () => {
       .forBrowser("chrome")
       .setChromeOptions(chromeOptions)
       .build();
-    await driver.get("D:\\home\\sirio\\panp4n\\categorypage.html");
+    await driver.get("C:\\\Users\\taobo\\panp4n\\categorypage.html");
     
   }, 30000);
   afterEach(async () => {

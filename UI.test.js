@@ -12,17 +12,17 @@ describe("Search Functionality", function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
       await driver.get(
-        "C:\\Users\\Deede\\panp4n\\ContentPage\\Invest_page.html"
+        "C:\\\Users\\taobo\\panp4n\\ContentPage\\Format_ContentPage.html"
       );
       await driver
         .findElement(By.css(".search-bar input[name='search']"))
         .sendKeys("มือใหม่หัดเริ่มลงทุน", Key.RETURN);
       await driver.wait(
-        until.urlContains("/ContentPage/Invest_page.html"),
+        until.urlContains("/ContentPage/Format_ContentPage.html"),
         10000
       );
       const currentURL = await driver.getCurrentUrl();
-      expect(currentURL).toContain("/ContentPage/Invest_page.html");
+      expect(currentURL).toContain("/ContentPage/Format_ContentPage.html");
     } finally {
       await driver.quit();
     }
@@ -33,7 +33,7 @@ describe("Search Functionality", function () {
     it("Register successful", async function () {
       let driver = await new Builder().forBrowser("chrome").build();
       try {
-        await driver.get("file:///C:/Users/Deede/panp4n/register.html");
+        await driver.get("C:\\\Users\\taobo\\panp4n\\register.html");
         await driver.findElement(By.id("username")).sendKeys("sc651010421");
         await driver.findElement(By.id("email")).sendKeys("sc651010421@g.swu.ac.th");
         await driver.findElement(By.id("password")).sendKeys("123456");
@@ -60,7 +60,7 @@ describe("Search Functionality", function () {
     it("Login -> HomePage", async function () {
       let driver = await new Builder().forBrowser("chrome").build();
       try {
-        await driver.get("file:///C:/Users/Deede/panp4n/login.html");
+        await driver.get("C:\\\Users\\taobo\\panp4n\\login.html");
         await driver.findElement(By.id("username")).sendKeys("sc651010203");
         await driver
           .findElement(By.id("password"))
@@ -89,7 +89,7 @@ describe("Search Functionality", function () {
     it("HomePage -> CategoryPage", async function () {
       let driver = await new Builder().forBrowser("chrome").build();
       try {
-        await driver.get("file:///C:/Users/Deede/panp4n/homepage.html");
+        await driver.get("C:\\\Users\\taobo\\panp4n\\homepage.html");
         await driver.findElement(By.linkText("หมวดหมู่")).click();
         await driver.wait(until.titleIs("Category Page"), 10000);
         let pageTitle = await driver.getTitle();

@@ -11,7 +11,7 @@ describe("Perform Registration", function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
 
-      await driver.get("C:\\Users\\Deede\\panp4n\\register.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\register.html");
       // ทดสอบกรณีที่การสมัครสำเร็จ
       await driver.findElement(By.id("username")).sendKeys("test01");
       await driver.findElement(By.id("email")).sendKeys("test01@g.swu.ac.th");
@@ -36,7 +36,7 @@ describe("checkPasswordMatch function", function () {
   it("should show error message if passwords do not match", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("C:\\Users\\Deede\\panp4n\\register.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\register.html");
 
       // รอให้ element ที่มี id เป็น "password" โหลดเสร็จสมบูรณ์
       await driver.wait(until.elementLocated(By.id("password")), 5000);
@@ -65,7 +65,7 @@ describe("checkLength min version function", function () {
   it("should show error message if length of passwords lower than 6", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("C:\\Users\\Deede\\panp4n\\register.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\register.html");
 
       // รอให้ element ที่มี id เป็น "password" โหลดเสร็จสมบูรณ์
       await driver.wait(until.elementLocated(By.id("password")), 5000);
@@ -94,7 +94,7 @@ describe("checkLength max version function", function () {
   it("should show error message if length of passwords higher than 16", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("C:\\Users\\Deede\\panp4n\\register.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\register.html");
 
       // รอให้ element ที่มี id เป็น "password" โหลดเสร็จสมบูรณ์
       await driver.wait(until.elementLocated(By.id("password")), 5000);

@@ -11,11 +11,11 @@ describe("Search Functionality", function () {
   it("should redirect to the correct URL if search query is found", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("C:\\Users\\Deede\\panp4n\\ContentPage\\Invest_page.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\ContentPage\\Format_ContentPage.html");
       await driver.findElement(By.css(".search-bar input[name='search']")).sendKeys("มือใหม่หัดเริ่มลงทุน", Key.RETURN);
-      await driver.wait(until.urlContains("/ContentPage/Invest_page.html"), 10000);
+      await driver.wait(until.urlContains("/ContentPage/Format_ContentPage.html"), 10000);
       const currentURL = await driver.getCurrentUrl();
-      expect(currentURL).toContain("/ContentPage/Invest_page.html");
+      expect(currentURL).toContain("/ContentPage/Format_ContentPage.html");
     } finally {
       await driver.quit();
     }

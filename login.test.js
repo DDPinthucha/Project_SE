@@ -11,7 +11,7 @@ describe("Perform Search", function () {
   it("Check if you can login to the home page", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
-      await driver.get("file:///C:/Users/Deede/panp4n/login.html");
+      await driver.get("C:\\\Users\\taobo\\panp4n\\login.html");
 
       await driver.findElement(By.id("username")).sendKeys("sc651010203");
       await driver.findElement(By.id("password")).sendKeys("45600", Key.RETURN);

@@ -7,7 +7,7 @@ describe("Perform Search", function () {
     it("HomePage -> CategoryPage", async function () {
         let driver = await new Builder().forBrowser("chrome").build();
         try {
-            await driver.get("file:///D:/home/sirio/panp4n/categorypage.html");
+            await driver.get("C:\\\Users\\taobo\\panp4n\\categorypage.html");
 
             // ใช้ CSS selector เพื่อค้นหา element ที่มี attribute href เป็น "/SubCategory/SubCategorySection.html"
             await driver.findElement(By.css('a.product')).click();
