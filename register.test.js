@@ -61,7 +61,7 @@ describe("checkPasswordMatch function", function () {
   });
 });
 
-describe("checkLength function", function () {
+describe("checkLength min version function", function () {
   it("should show error message if length of passwords lower than 6", async function () {
     let driver = await new Builder().forBrowser("chrome").build();
     try {
@@ -83,9 +83,40 @@ describe("checkLength function", function () {
       let errorMessageElement = await driver.findElement(By.className("form-control error"));
       let errorMessage = await errorMessageElement.getText();
       expect(errorMessage).toContain("Password must be at least 6 characters");
-      //console.log(errorMessage);
+      console.log(errorMessage);
     } finally {
       await driver.quit();
     }
   });
 });
+
+describe("checkLength max version function", function () {
+  it("should show error message if length of passwords higher than 16", async function () {
+    let driver = await new Builder().forBrowser("chrome").build();
+    try {
+      await driver.get("file:///C:/Users/taobo/panp4n/register.html");
+
+      // รอให้ element ที่มี id เป็น "password" โหลดเสร็จสมบูรณ์
+      await driver.wait(until.elementLocated(By.id("password")), 5000);
+
+      // เตรียมข้อมูลสำหรับทดสอบ
+      await driver.findElement(By.id("username")).sendKeys("test01");
+      await driver.findElement(By.id("email")).sendKeys("test01@g.swu.ac.th");
+      await driver.findElement(By.id("password")).sendKeys("12345678910111213");
+      await driver.findElement(By.id("password_confirm")).sendKeys("12345678910111213");
+      await driver.findElement(By.id("submitbtt")).click();
+      // รอให้ Element ที่แสดงข้อความผิดพลาดโหลดเสร็จสมบูรณ์
+      await driver.wait(until.elementLocated(By.className("form-control error")), 5000);
+
+      // ตรวจสอบข้อความผิดพลาดที่แสดงบนหน้าเว็บ
+      let errorMessageElement = await driver.findElement(By.className("form-control error"));
+      let errorMessage = await errorMessageElement.getText();
+      expect(errorMessage).toContain("Password must be less than 16 characters");
+      console.log(errorMessage);
+    } finally {
+      await driver.quit();
+    }
+  });
+});
+
+
