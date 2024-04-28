@@ -3,7 +3,7 @@ var cards = [
     {
         id:1, /*Learning*/
         type:"Learning",
-        id_sec:"graph",
+        id_sec:"GraphSum",
         image: "/images/graph.jpg",
         title: "กราฟคืออะไร ?",
         content: "มารู้จักกับกราฟกัน! กราฟคืออะไร และมันมีประโยชน์อย่างไรกันนะ ?",
@@ -229,30 +229,21 @@ let allSection = [
 
 
 
-window.onload = function(){
+window.onload = function() {
     const section = localStorage.getItem('section');
     show(section, () => {
         const links_content = document.querySelectorAll('.btn');
-        for (let i = 0; i < allSection.length; i++) {
-            const contents = allSection[i];
-            if (section === contents.section) {
-                for (let j = 0; j < contents.allcontent.length; j++) {
-                    const detail = contents.allcontent[j];
-                    const linkCon = links_content[j];
-                    console.log(detail);
-                    console.log(linkCon);
-                    linkCon.addEventListener("click", function(event) {
-                        const clickedLinkId = event.target.id;
-                        if (clickedLinkId === detail) {
-                            console.log(detail);
-                            localStorage.setItem('detail', detail);
-                        }
-                    });
-                }
-            }
-        }
+        links_content.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                console.log("Selected Section ID:", this.id);
+                localStorage.setItem('detail', this.id);
+                window.location.href = this.href;
+            });
+        });
     });
 };
+
 
 
 function show(section,callback) {

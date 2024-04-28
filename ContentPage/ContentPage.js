@@ -291,6 +291,7 @@ var contents = [
   window.onload = function () {
     // โหลดจำนวนไลค์จาก Local Storage
     const details = localStorage.getItem('detail');
+    console.log(details);
     const section_content = localStorage.getItem('section');
     let currentLikes = parseInt(localStorage.getItem('likes')) || 0;
     document.getElementById("counter").textContent = currentLikes;
@@ -301,7 +302,7 @@ var contents = [
     let showContents = document.getElementById("showContentHere");
     showContents.innerHTML = "" ;
       contents.forEach(content_detail => {
-        if (content_detail.type === section_content && content_detail.detail === details) {
+        if ( content_detail.detail === details) {
           showContents.innerHTML += `
           <div class="left-side">
             <h1>${content_detail.bigHead}</h1>
