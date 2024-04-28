@@ -150,7 +150,7 @@ body {
     font-size: 6px; /* กำหนดขนาดตัวอักษรของหัวข้อสินค้าให้ขยายตามความกว้างของหน้าจอ */
     margin-bottom: 10px;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .product-description {
