@@ -14,6 +14,7 @@ describe("webdriver", () => {
       .setChromeOptions(chromeOptions)
       .build();
     await driver.get("D:\\home\\sirio\\panp4n\\categorypage.html");
+    
   }, 30000);
   afterEach(async () => {
     await driver.close();
