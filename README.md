@@ -1,15 +1,17 @@
 # Software Engineering Project (panp4n)
+"panp4n" is a web application project developed as part of a Software Engineering course. The objective is to build a web system where users can log in, explore different categories, and view randomly displayed content on the homepage.
+This project is developed using HTML, CSS, and JavaScript, with Node.js used for dependency management. Unit tests are also implemented to ensure the correctness of various functions.
 
-# Getting Started
-
-
-# Build and Test
-
-
-# Contribute
+## Getting Started
 
 
-# Screenshot Web App
+## Build and Test
+
+
+## Contribute
+
+
+## Screenshot Web App
 ![Register Page](https://github.com/user-attachments/assets/a98e7d0f-1223-4198-a011-5f9456f34930)
 ![Login Page](https://github.com/user-attachments/assets/49b4ed2c-fbb7-44c3-9d91-fe0eb41b9f12)
 ![Home Page 1](https://github.com/user-attachments/assets/d51ed4a2-70bb-47c6-b27b-40aafca25890)
