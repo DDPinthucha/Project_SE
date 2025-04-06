@@ -1,5 +1,5 @@
-# Software Engineering Project (panp4n)
-**"panp4n"** is a web application project developed as part of a Software Engineering course. The objective is to build a web system where users can log in, explore different categories, and view randomly displayed content on the homepage.
+# Software Engineering Project (LearnHuff)
+**"LearnHuff"** is a web application project developed as part of a Software Engineering course. The objective is to build a web system where users can log in, explore different categories, and view randomly displayed content on the homepage.
 
 This project is developed using HTML, CSS, and JavaScript, with Node.js used for dependency management. Unit tests are also implemented to ensure the correctness of various functions.
 
