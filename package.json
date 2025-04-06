@@ -17,5 +17,8 @@
     "mock-local-storage": "^1.1.24",
     "selenium-webdriver": "^4.19.0"
   },
-  "total_likes": 0
+  "total_likes": 0,
+  "devDependencies": {
+    "@testing-library/dom": "^10.0.0"
+  }
 }

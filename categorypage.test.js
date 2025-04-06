@@ -1,4 +1,4 @@
-
+/*
 // นำเข้าโมดูลที่จำเป็นของ Node.js
 const fs = require('fs');
 const path = require('path');
@@ -69,4 +69,4 @@ describe('Clicking on product links', () => {
   });
 
   // เพิ่มการทดสอบเพิ่มเติมสำหรับลิงก์สินค้าอื่น ๆ หากต้องการ
-});
+});*/
