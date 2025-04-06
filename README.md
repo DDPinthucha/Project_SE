@@ -1,18 +1,13 @@
-![Home Page](https://github.com/user-attachments/assets/1dc3e469-fa19-4d39-bc11-909074ed3329)![Home Page 1](https://github.com/user-attachments/assets/99af7166-3188-4f7f-b99f-6b6923d7bedd)# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Software Engineering Project (panp4n)
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+
 
 # Screenshot Web App
 ![Register Page](https://github.com/user-attachments/assets/a98e7d0f-1223-4198-a011-5f9456f34930)
